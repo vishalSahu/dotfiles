@@ -1,0 +1,215 @@
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 1. user_interface
+" 2. colors_and_highlights
+" 3. auto_commands
+" 4. mappings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" all settings are from ~/.config/nvim/init.vim
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" user_interface
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible
+
+set autoread                        " auto read when a file is changed
+set autochdir
+set modeline
+set cmdheight=1                     " height of the command bar
+set ruler                           " always show current position
+set showmatch                       " show matching brackets
+set noeb                            " disable error bells
+set vb t_vb=                        " disable visual bells
+set backspace=eol,start,indent      " configure backspace
+set history=700
+set lazyredraw                      " don't redraw while executing macros
+set laststatus=2                    " always show status line
+set ttimeoutlen=100
+set so=3                            " number of lines above and below the cursor
+set number
+set noerrorbells                    " no annoying sound on errors
+set novisualbell
+set magic                           " use extended regular expressions
+set encoding=utf8
+set t_Co=256                        " use 256 colors
+
+set autoindent
+set smartindent
+set tw=119                           " wrap at col=120
+set colorcolumn=121                 " to unset: "set colorcolumn&"
+set wrap
+set whichwrap+=<,>,[,]              " go to start of next line when moved past end
+
+set shiftwidth=2
+set expandtab                       " Use spaces instead of tabs
+set smarttab
+set tabstop=2
+set softtabstop=2
+set shiftwidth=2
+
+set nobackup
+set noswapfile
+set nowritebackup
+set showmatch
+set matchtime=0
+
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+" https://stackoverflow.com/q/9511253
+set wildmenu                        " turn on the wild menu
+"set wildmode=longest:list,full
+set wildmode=list:longest,full
+set wildignore=*.o,*~,*.pyc         " ignore selected files
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" colors_and_highlights
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+filetype on
+filetype plugin on
+filetype indent on
+
+let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+set termguicolors
+set background=dark
+syntax on
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" auto_commands
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Show trailing whitespace
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
+" specify the behavior when switching between buffers
+try
+  set switchbuf=useopen,usetab,newtab
+  set stal=2
+catch
+endtry
+
+" return to last edit position when opening files
+autocmd BufReadPost *
+  \ if line("'\"") > 0 && line("'\"") <= line("$") |
+  \   exe "normal! g`\"" |
+  \ endif
+
+" auto change dir to current file
+autocmd BufEnter * silent! lcd %:p:h
+
+" execute autoread every n secs
+autocmd CursorHold * silent! checktime
+
+" delete trailing white space on save
+function! TrimWhiteSpace()
+  let l = line(".")
+  let c = col(".")
+  %s/\s\+$//e
+  call cursor(l, c)
+endfunc
+autocmd BufWritePre * :call TrimWhiteSpace()
+
+" format options are overwritten by vim.vim plugin
+autocmd BufEnter * setlocal formatoptions=2tcrqnvl
+
+" enable folding for cpp
+"autocmd Filetype cpp setlocal foldmethod=syntax
+
+" tabstop = 4 for python
+au BufRead,BufNewFile *.py set tabstop=4
+
+" return to last edit position when opening files
+autocmd BufReadPost *
+  \ if line("'\"") > 0 && line("'\"") <= line("$") |
+  \   exe "normal! g`\"" |
+  \ endif
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" mappings
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"let mapleader = "\<Space>"
+"let g:mapleader = "\<Space>"
+let mapleader='^z'
+let maplocalleader = '^z'
+
+" turn off highlighting and clear any message already displayed.
+nnoremap <silent> <leader><CR> :nohls<Bar>:echo<CR>
+
+"fast save and quit
+nmap <leader>w :w!<CR>
+nmap <leader>q :q<CR>
+
+" remap VIM 0 to first non-blank character
+map 0 ^
+
+map <ScrollWheelUp> <C-Y>
+map <ScrollWheelDown> <C-E>
+
+map <C-l> :redraw!<CR>
+" paste and copy
+nmap <S-Insert> "*P
+nmap <C-Insert> "*y
+" visual mode paste and copy
+vmap <C-Insert> "*y
+vmap <S-Insert> "*P
+vmap <C-Del> "*c
+" insert mode paste and del
+imap <S-Insert> <MiddleMouse>
+" <C-o> allows a single command to execute in command mode and return back to insert mode
+imap <C-x> <C-o>x
+
+" move a line of text using ALT+[jk] or Command+[jk] on mac
+nmap <M-j> mz:m+<CR>`z
+nmap <M-k> mz:m-2<CR>`z
+vmap <M-j> :m'>+<CR>`<my`>mzgv`yo`z
+vmap <M-k> :m'<-2<CR>`>my`<mzgv`yo`z
+
+" treat long lines as break lines (useful when moving around in them)
+map j gj
+map k gk
+
+" visual mode pressing * or # searches for the current selection
+vnoremap <silent> * :call VisualSelection('f')<CR>
+vnoremap <silent> # :call VisualSelection('b')<CR>
+
+" map commmon typos
+command! WQ wq
+command! Wq wq
+command! W w
+command! Q q
+command! Qa qa
+command! Tabp tabp
+command! Tabn tabn
+
+" reselect visual block after indent/outdent. Allow ident/outdent multiple times
+vnoremap < <gv
+vnoremap > >gv
+
+" move easily across splits
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+
+" intellij mappings: https://stackoverflow.com/q/31970413
+" complete keymap here: https://anotepad.com/notes/7g8gn4
+
+" useful mappings for managing tabs
+nnoremap <leader>n :action NextEditorTab<CR>
+nnoremap <leader>p :action PreviousEditorTab<CR>
+nnoremap <leader>x :action CloseActiveTab<CR>
+
+" intellij mappings
+nnoremap <leader>b :action GotoDeclaration<CR>
+nnoremap <leader>q :action GuiDesigner.QuickJavadoc<CR>
+nnoremap <leader>p :action ParameterInfo<CR>
+set ideajoin

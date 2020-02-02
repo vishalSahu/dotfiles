@@ -1,0 +1,26 @@
+
+export EDITOR="nvim";
+
+# make sure casks get installed in the right directory
+export HOMEBREW_CASK_OPTS="--appdir=/Applications"
+# no analytics, see https://docs.brew.sh/Analytics
+export HOMEBREW_NO_ANALYTICS=1
+
+# use curl from brew
+export PATH="/usr/local/opt/curl/bin:$PATH"
+# brew binaries
+export PATH="/usr/local/bin:$PATH"
+# local binaries
+export PATH="$PATH:$HOME/bin"
+# python from homebrew
+export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+# use 'ls' and other utils from GNU
+export PATH="/usr/local/opt/coreutils/libexec/gnubin:$PATH";
+
+# Prefer US English and use UTF-8.
+export LANG="en_US.UTF-8";
+export LC_ALL="en_US.UTF-8";
+
+# Highlight section titles in manual pages.
+export LESS_TERMCAP_md="${yellow}";
+

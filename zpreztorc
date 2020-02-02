@@ -1,0 +1,38 @@
+# prezto modules
+# 'syntax-highlighting' needs to be loaded before 'prompt' & 'history-substring-search' module
+zstyle ':prezto:load' pmodule \
+  'syntax-highlighting' \
+  'completion' \
+  'directory' \
+  'editor' \
+  'environment' \
+  'git' \
+  'history' \
+  'history-substring-search' \
+  'homebrew' \
+  'osx' \
+  'prompt' \
+  'python' \
+  'spectrum' \
+  'terminal' \
+  'tmux' \
+  'utility'
+
+# Set theme
+zstyle ':prezto:module:prompt' theme 'agnoster'
+
+# Auto convert .... to ../..
+zstyle ':prezto:module:editor' dot-expansion 'yes'
+
+# Set syntax highlighters.
+# By default, only the main highlighter is enabled.
+zstyle ':prezto:module:syntax-highlighting' highlighters \
+  'main' \
+  'brackets' \
+  'pattern' \
+  'line' \
+  'cursor' \
+  'root'
+
+# Disable git aliases
+zstyle ':prezto:module:git:alias' skip 'yes'

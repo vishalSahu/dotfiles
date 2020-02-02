@@ -1,0 +1,49 @@
+[push]
+	default = upstream
+
+[remote "origin"]
+  # clone without tags (https://stackoverflow.com/a/44011502)
+	tagopt = --no-tags
+
+[core]
+  editor = vim
+  pager = "diff-so-fancy | less --tabs=2 -RFX"
+  excludesfile = /Users/vishal/.gitignore_global
+
+[alias]
+  br = branch -vv
+  ba = branch -avv
+  lo = log --oneline -n
+  co = checkout
+  # rawdiff without fancy formatting
+  rdiff = -c core.pager= diff 
+
+#[diff]
+#  tool = "smerge"
+#[difftool]
+#  prompt = false
+#[difftool "smerge"]
+#  cmd = smerge mergetool \"$LOCAL\" \"$REMOTE\"
+[mergetool "smerge"]
+	cmd = smerge mergetool \"$BASE\" \"$LOCAL\" \"$REMOTE\" -o \"$MERGED\"
+	trustExitCode = true
+[merge]
+	tool = smerge
+
+[commit]
+
+[filter "lfs"]
+  process = git-lfs filter-process
+  required = true
+  clean = git-lfs clean -- %f
+  smudge = git-lfs smudge -- %f
+
+[color]
+  ui = auto
+[color "branch"]
+  current = yellow bold
+  local = green bold
+  remote = cyan bold
+[color "diff"]
+  meta = yellow
+

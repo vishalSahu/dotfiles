@@ -1,0 +1,82 @@
+
+alias less="less -iR"
+alias grep="grep --color=auto"
+alias rg="rg -np"
+alias hist="history"
+alias j="jobs -l"
+alias du="du -kh"  # Makes a more readable output.
+alias df="df -kTh"
+
+
+# Detect which `ls` flavor is in use
+if ls --color > /dev/null 2>&1; then # GNU `ls`
+	colorflag="--color=always"
+  # override colors with LS_COLORS
+  # export LS_COLORS="rs=0:di=01;34:ln=01;36:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:su=37;41:sg=30;43:tw=30;42:ow=34;42:st=37;44:ex=01;32:";
+else # macOS `ls`
+	colorflag="-G"
+	export LSCOLORS="Gxfxcxdxbxegedabagacad"
+fi
+# Always use color output for `ls`
+alias ls="command ls -F ${colorflag}"
+#alias l="ls -lLBhX --time-style=locale"
+#alias la="ls -la $1 | less"
+#alias ll="ls -lX"
+#alias lx="ls -lXB" # sort by ext
+#alias lk="ls -lSr" # soft by size
+
+#IP addresses
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en0"
+
+# Pretty-print of some PATH variables:
+alias path='echo -e ${PATH//:/\\n}'
+alias libpath="echo -e ${LD_LIBRARY_PATH//:/\\n}"
+
+# Prety-print json (use jq instead)
+#alias prettyjson="python -m json.tool | pygmentize -f terminal256 -O style=native -g | less"
+
+# Prevent auto logout on ssh
+alias ssh="ssh -o ServerAliveInterval=30"
+
+# Show/hide hidden files in Finder
+alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+
+# Lock the screen
+alias lock="/System/Library/CoreServices/Menu\ Extras/User.menu/Contents/Resources/CGSession -suspend"
+# Start screensaver
+alias afk="open -a ScreenSaverEngine"
+
+alias finder="open -a Finder ."
+
+# bat (https://github.com/sharkdp/bat)
+alias bat="bat --theme='OneHalfDark'"
+
+# htop (hisham.hm/htop/)
+alias top="htop"
+
+alias http="http --style=native -b"
+alias httpr="http --style=native --pretty=colors -b"
+
+# View man pages in Preview
+#alias pman="ps=`mktemp -t $@`.ps && man -t $@ > "$ps" && open "$ps""
+
+# hex - decimal conversion
+function tohex() {
+  echo "obase=16; $1" | bc
+}
+function todec() {
+  input=$(echo $1 | tr '[:lower:]' '[:upper:]')
+  echo "ibase=16; $input" | bc
+}
+
+# weather
+function weather() {
+  curl "https://wttr.in/$1"
+}
+
+# cheatsheet
+function cheat() {
+  curl "https://cht.sh/$1"
+}
