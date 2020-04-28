@@ -1,0 +1,125 @@
+{
+    "editor.cursorBlinking": "solid",
+    // "editor.cursorStyle": "block-outline",
+    "editor.fontSize": 13,
+    "editor.fontFamily": "'JetBrains Mono', 'Fira Code', Menlo",
+    "editor.fontLigatures": true,
+    "editor.lineHeight": 0, // use 0 to compute from fontsize
+    "editor.minimap.enabled": false,
+    "editor.occurrencesHighlight": false,
+    "editor.rulers": [
+        100,
+        120
+    ],
+    "editor.scrollBeyondLastLine": false,
+    "editor.showFoldingControls": "mouseover",
+    "editor.suggestSelection": "first",
+    "editor.tabSize": 2,
+    "editor.tokenColorCustomizations": {
+        // "comments": "#6d6d6d"  // override comment color from the theme
+    },
+    "editor.wordWrap": "off", // use vim <gq> command instead
+
+    "explorer.openEditors.visible": 0,
+    "explorer.confirmDragAndDrop": false,
+
+    "extensions.ignoreRecommendations": true,
+
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 60000,
+    "files.exclude": {
+        "**/.git": true,
+        "**/.idea": true,
+        "**/.DS_Store": true,
+        "**/.project": true,
+        "**/.settings": true,
+    },
+    "files.trimTrailingWhitespace": true,
+
+    "telemetry.enableCrashReporter": false,
+    "telemetry.enableTelemetry": false,
+    "update.mode": "none",
+
+    "terminal.external.osxExec": "iTerm.app",
+    "terminal.integrated.fontFamily": "'JetBrains Mono', 'Fira Code', Menlo",
+    "terminal.integrated.fontSize": 12,
+    "terminal.integrated.lineHeight": 1,
+    "terminal.integrated.scrollback": 5000,
+
+    "window.zoomLevel": 0,
+
+    "workbench.activityBar.visible": false,
+    "workbench.colorTheme": "Noctis Minimus", // install theme liviuschera.noctis
+    "workbench.colorCustomizations": {
+        // "editor.background": "#1f2329",
+        // "editor.lineHighlightBackground": "#303640",
+        // "editorGutter.background": "#0a1313"
+    },
+    "workbench.fontAliasing": "antialiased",
+    "workbench.iconTheme": "seti", // install qinjia.seti-icons
+    "workbench.settings.editor": "json",
+    "workbench.statusBar.visible": true,
+    // "workbench.tree.indent": 8,
+    // "workbench.tree.renderIndentGuides": "always",
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+    // Language Specific Settings
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+    "[markdown]": {
+        "editor.wordWrap": "on",
+        "editor.quickSuggestions": true
+    },
+
+    "[python]": {
+        "editor.tabSize": 4
+    },
+
+
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+    // Extensions
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Name: Vim
+    // Id: vscodevim.vim
+    // Link: https://marketplace.visualstudio.com/items?itemName=vscodevim.vim
+    //
+    // Name: Scala Syntax (official)
+    // Id: scala-lang.scala
+    // Link: https://marketplace.visualstudio.com/items?itemName=scala-lang.scala
+    //
+    // Name: IntelliJ IDEA Keybindings
+    // Id: k--kato.intellij-idea-keybindings
+    // Link: https://marketplace.visualstudio.com/items?itemName=k--kato.intellij-idea-keybindings
+    //
+    // Name: Noctis
+    // Id: liviuschera.noctis
+    // Link: https://marketplace.visualstudio.com/items?itemName=liviuschera.noctis
+    //
+    // Name: seti-icons
+    // Id: qinjia.seti-icons
+    // Link: https://marketplace.visualstudio.com/items?itemName=qinjia.seti-icons
+    //
+    // Might be useful
+    // Name: Settings Sync
+    // Id: shan.code-settings-sync
+    // Link: https://marketplace.visualstudio.com/items?itemName=Shan.code-settings-sync
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////////////
+
+    // vim plugin
+    "vim.easymotion": true,
+    "vim.hlsearch": true,
+    "vim.incsearch": true,
+    "vim.leader": "<space>",
+    // "vim.searchHighlightColor": "#fa7035ce",
+    // "vim.searchHighlightTextColor": "#2e2e2d",
+    "vim.textwidth": 100, // use gq to format lines to 100 chars
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.handleKeys": {
+        "<C-a>": true,
+        "<C-f>": true
+    },
+
+}
