@@ -1,0 +1,263 @@
+{
+  "default": [
+    {
+      "expression": "*.amazon.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cookieNames": [],
+      "id": "VE-BihI1Rh"
+    },
+    {
+      "expression": "*.invidio.us",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanLocalStorage": false,
+      "cookieNames": [],
+      "id": "Q1t1i25Cw"
+    },
+    {
+      "expression": "*.login.xfinity.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cookieNames": [],
+      "id": "B94R7I4t"
+    },
+    {
+      "expression": "*.mychart.stanfordchildrens.org",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cookieNames": [],
+      "id": "O9LfQofG"
+    },
+    {
+      "expression": "*.myuhc.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cookieNames": [],
+      "id": "qN-Yiweu8"
+    },
+    {
+      "expression": "*.rba-ose.myuhc.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cookieNames": [],
+      "id": "1SacTEd5K"
+    },
+    {
+      "expression": "*.stanfordchildrens.org",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cookieNames": [],
+      "id": "tLgQubGO"
+    },
+    {
+      "expression": "*.xfinity.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cookieNames": [],
+      "id": "i00u4C9r"
+    },
+    {
+      "expression": "accounts.google.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "id": "mUvXOHbkZ",
+      "cookieNames": []
+    },
+    {
+      "expression": "amazon.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cookieNames": [],
+      "id": "MRE0o2BiN"
+    },
+    {
+      "expression": "github.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "id": "3lsIQ-Bg26",
+      "cookieNames": []
+    },
+    {
+      "expression": "invidio.us",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanLocalStorage": false,
+      "cookieNames": [],
+      "id": "G5eSjeK9F"
+    },
+    {
+      "expression": "login.xfinity.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cookieNames": [],
+      "id": "WcuWuiNf"
+    },
+    {
+      "expression": "mail.google.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "id": "xK27MRmZzw",
+      "cookieNames": []
+    },
+    {
+      "expression": "mychart.stanfordchildrens.org",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cookieNames": [],
+      "id": "-6ax5elj"
+    },
+    {
+      "expression": "personal.vanguard.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cookieNames": [],
+      "id": "N7NDqOiqjd"
+    },
+    {
+      "expression": "rba-ose.myuhc.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cookieNames": [],
+      "id": "G5YgUzkWM"
+    },
+    {
+      "expression": "troweprice.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cookieNames": [],
+      "id": "whW5hF2Zx6"
+    }
+  ],
+  "firefox-private": [
+    {
+      "expression": "*.chase.com",
+      "listType": "WHITE",
+      "storeId": "firefox-private",
+      "cookieNames": [],
+      "id": "_MlPK4n2M9"
+    },
+    {
+      "expression": "*.github.com",
+      "listType": "WHITE",
+      "storeId": "firefox-private",
+      "cookieNames": [],
+      "id": "Cn2tlo-wx"
+    },
+    {
+      "expression": "*.login.xfinity.com",
+      "listType": "WHITE",
+      "storeId": "firefox-private",
+      "cookieNames": [],
+      "id": "U0fvmd3I"
+    },
+    {
+      "expression": "*.mychart.stanfordchildrens.org",
+      "listType": "WHITE",
+      "storeId": "firefox-private",
+      "cookieNames": [],
+      "id": "kayji41C"
+    },
+    {
+      "expression": "*.stanfordchildrens.org",
+      "listType": "WHITE",
+      "storeId": "firefox-private",
+      "cookieNames": [],
+      "id": "EKxmWxgB"
+    },
+    {
+      "expression": "*.troweprice.com",
+      "listType": "WHITE",
+      "storeId": "firefox-private",
+      "cookieNames": [],
+      "id": "6v1ERt_Y"
+    },
+    {
+      "expression": "*.vanguard.com",
+      "listType": "WHITE",
+      "storeId": "firefox-private",
+      "cookieNames": [],
+      "id": "WRP6ZDZ2V8"
+    },
+    {
+      "expression": "*.xfinity.com",
+      "listType": "WHITE",
+      "storeId": "firefox-private",
+      "cookieNames": [],
+      "id": "8nAbA19j"
+    },
+    {
+      "expression": "att.com",
+      "listType": "WHITE",
+      "storeId": "firefox-private",
+      "cookieNames": [],
+      "id": "sB-20v_TbB"
+    },
+    {
+      "expression": "bankofamerica.com",
+      "listType": "WHITE",
+      "storeId": "firefox-private",
+      "cookieNames": [],
+      "id": "5iwe22cUmf"
+    },
+    {
+      "expression": "github.com",
+      "listType": "WHITE",
+      "storeId": "firefox-private",
+      "cookieNames": [],
+      "id": "L7enh4w54"
+    },
+    {
+      "expression": "login.xfinity.com",
+      "listType": "WHITE",
+      "storeId": "firefox-private",
+      "cookieNames": [],
+      "id": "r0O8AxUy"
+    },
+    {
+      "expression": "mychart.stanfordchildrens.org",
+      "listType": "WHITE",
+      "storeId": "firefox-private",
+      "cookieNames": [],
+      "id": "3Pf7eK4B"
+    },
+    {
+      "expression": "personal.vanguard.com",
+      "listType": "WHITE",
+      "storeId": "firefox-private",
+      "cookieNames": [],
+      "id": "TcflwpDbHT"
+    },
+    {
+      "expression": "troweprice.com",
+      "listType": "WHITE",
+      "storeId": "firefox-private",
+      "cookieNames": [],
+      "id": "ptWG5te7"
+    }
+  ],
+  "firefox-container-1": [],
+  "firefox-container-6": [
+    {
+      "expression": "*.accounts.google.com",
+      "listType": "WHITE",
+      "storeId": "firefox-container-6",
+      "cookieNames": [],
+      "id": "DRJ-2dMGz"
+    },
+    {
+      "expression": "*.google.com",
+      "listType": "WHITE",
+      "storeId": "firefox-container-6",
+      "cookieNames": [],
+      "id": "XVOLQIX2Z"
+    },
+    {
+      "expression": "accounts.google.com",
+      "listType": "WHITE",
+      "storeId": "firefox-container-6",
+      "cookieNames": [],
+      "id": "_BUh9pBaC"
+    }
+  ]
+}

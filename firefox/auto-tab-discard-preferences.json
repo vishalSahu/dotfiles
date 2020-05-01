@@ -1,0 +1,35 @@
+{
+  "chrome.storage.local": {
+    "audio": true,
+    "battery": false,
+    "check-delay": 30000,
+    "click": "click.popup",
+    "faqs": false,
+    "favicon": true,
+    "favicon-delay": 500,
+    "form": true,
+    "go-hidden": false,
+    "idle": false,
+    "idle-timeout": 300,
+    "last-update": 1588273205723,
+    "link.context": false,
+    "log": false,
+    "memory-enabled": false,
+    "memory-value": 60,
+    "mode": "time-based",
+    "notification.permission": false,
+    "number": 30,
+    "online": true,
+    "page.context": false,
+    "period": 3600,
+    "pinned": false,
+    "simultaneous-jobs": 10,
+    "tab.context": true,
+    "use-cache": false,
+    "whitelist": [],
+    "whitelist-url": []
+  },
+  "localStorage": {
+    "explore-count": "96"
+  }
+}

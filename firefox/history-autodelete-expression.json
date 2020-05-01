@@ -1,0 +1,32 @@
+[
+  {
+    "expression": "*.redd.it*",
+    "id": "B1yQeKpLL",
+    "regExp": "^.*\\.redd\\.it.*$"
+  },
+  {
+    "expression": "*imgur.com*",
+    "id": "SyoZxYpUU",
+    "regExp": "^.*imgur\\.com.*$"
+  },
+  {
+    "id": "SyfV3jFUL",
+    "expression": "*reddit.com*",
+    "regExp": "^.*reddit\\.com.*$"
+  },
+  {
+    "id": "HySGnoYIU",
+    "expression": "duckduckgo.com*",
+    "regExp": "^duckduckgo\\.com.*$"
+  },
+  {
+    "expression": "google.com*",
+    "id": "Bk7mJhFII",
+    "regExp": "^google\\.com.*$"
+  },
+  {
+    "expression": "old.reddit.com*",
+    "id": "BJzyhiKUL",
+    "regExp": "^old\\.reddit\\.com.*$"
+  }
+]
