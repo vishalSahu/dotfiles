@@ -1,9 +1,10 @@
 {
     "editor.cursorBlinking": "solid",
     // "editor.cursorStyle": "block-outline",
-    "editor.fontSize": 13,
     "editor.fontFamily": "'JetBrains Mono', 'Fira Code', Menlo",
     "editor.fontLigatures": true,
+    "editor.fontSize": 13,
+    "editor.fontWeight": "400",
     "editor.lineHeight": 0, // use 0 to compute from fontsize
     "editor.minimap.enabled": false,
     "editor.occurrencesHighlight": false,
@@ -48,8 +49,8 @@
 
     "window.zoomLevel": 0,
 
-    "workbench.activityBar.visible": false,
-    "workbench.colorTheme": "Noctis Minimus", // install theme liviuschera.noctis
+    "workbench.activityBar.visible": true,
+    "workbench.colorTheme": "Cobalt Next",
     "workbench.colorCustomizations": {
         // "editor.background": "#1f2329",
         // "editor.lineHighlightBackground": "#303640",
@@ -96,6 +97,14 @@
     // Id: liviuschera.noctis
     // Link: https://marketplace.visualstudio.com/items?itemName=liviuschera.noctis
     //
+    // Name: Cobalt Next
+    // Id: dline.cobaltnext
+    // Link: https://marketplace.visualstudio.com/items?itemName=dline.CobaltNext
+    //
+    // Name: Cobalt2 Theme Official
+    // Id: wesbos.theme-cobalt2
+    // Link: https://marketplace.visualstudio.com/items?itemName=wesbos.theme-cobalt2
+    //
     // Name: seti-icons
     // Id: qinjia.seti-icons
     // Link: https://marketplace.visualstudio.com/items?itemName=qinjia.seti-icons
@@ -115,7 +124,7 @@
     // "vim.searchHighlightColor": "#fa7035ce",
     // "vim.searchHighlightTextColor": "#2e2e2d",
     "vim.textwidth": 100, // use gq to format lines to 100 chars
-    "vim.useSystemClipboard": true,
+    "vim.useSystemClipboard": false,
     "vim.useCtrlKeys": true,
     "vim.handleKeys": {
         "<C-a>": true,
@@ -123,3 +132,4 @@
     },
 
 }
+
