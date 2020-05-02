@@ -1,0 +1,87 @@
+/*
+ * Do not remove the @namespace line -- it's required for correct functioning
+ */
+ @namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* set default namespace to XUL */
+
+/*
+.tabbrowser-tab[usercontextid] .tab-bottom-line {
+  display: none !important;
+}
+*/
+
+.tab-bottom-line {
+  /* no bottom line */
+  display:none!important;
+}
+
+.tab-background {
+  /* rounded top corners */
+  border-radius: 4px 4px 0 0 !important;
+}
+
+/* tab setting for normal tabs */
+.tabbrowser-tab .tab-line {
+  background: gray !important;
+  transform:scaleX(.8)!important;
+  opacity:.4!important;
+  height:2px!important;
+  border-radius:0 0 2px 2px!important;
+  margin-top: 1px !important;
+}
+
+/* tab setting for container tabs */
+.tabbrowser-tab[usercontextid] .tab-line {
+  background:var(--identity-tab-color)!important;
+}
+
+/* pinned tabs */
+.tabbrowser-tab[pinned] .tab-line {
+  transform:scaleX(.65)!important;
+}
+/* .tabbrowser-tab[usercontextid][pinned] .tab-line{
+  transform:scaleX(.9)!important;
+}
+ */
+/* hover setting for not selected tab */
+.tabbrowser-tab:not([visuallyselected]):hover .tab-line {
+  border-radius:0!important;
+  height:2px!important;
+  transform:scaleX(1)!important;
+  opacity:.8!important;
+}
+
+/* settings for selected tab */
+.tabbrowser-tab[visuallyselected] .tab-line {
+  border-radius:0!important;
+  height:2px!important;
+  transform:scaleX(0.98)!important;
+  margin-top: 1px !important;
+  opacity:1!important;
+}
+
+/* tab loading animation */
+.tabbrowser-tab {
+  --tab-loading-fill:Highlight!important;
+}
+.tabbrowser-tab[usercontextid] {
+  --tab-loading-fill:var(--identity-tab-color)!important;
+}
+
+/* change up usercontext label; make container label more promiment in urlbar */
+/* #userContext-icons{
+  background:var(--identity-tab-color)!important;
+  margin:auto 3px!important;
+  border-radius:2px!important;
+  padding:0 2px 0 5px!important;
+}
+#userContext-label{
+  color:#fff!important;
+}
+#userContext-indicator{
+  fill:#fff!important;
+  margin-right:2px!important;
+}
+#userContext-indicator[data-identity-icon="circle"]{
+  display:none!important;
+} */
+

@@ -1,5 +1,12 @@
 # Firefox and Extensions Preferences
 
-Copy `user.js` to the default profiles folder under `~/Library/Application Support/Firefox` and restart firefox.
+## Config and appearance
+1. Copy `user.js` to the default profiles directory under `~/Library/Application Support/Firefox`.
+2. Make `chrome` directory under profiles directory.
+3. Copy `userChrome.css` to `chrome` directory.
+4. Restart firefox.
 
-Some extensions are backed to file, other are synced via Firefox sync or use default preferences.
+## Extensions
+1. Sign in to Firefox Sync.
+2. Import extensions settings.
+3. Some extensions settings are synced via Firefox sync or use default preferences.
