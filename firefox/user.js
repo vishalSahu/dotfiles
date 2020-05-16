@@ -350,7 +350,7 @@ user_pref("browser.urlbar.trimURLs", false);
  * [1] https://dbaron.org/mozilla/visited-privacy
  * [2] https://bugzilla.mozilla.org/147777
  * [3] https://developer.mozilla.org/docs/Web/CSS/Privacy_and_the_:visited_selector ***/
-// user_pref("layout.css.visited_links_enabled", false);
+user_pref("layout.css.visited_links_enabled", false);
 /* 0807: disable live search suggestions
 /* [NOTE] Both must be true for the location bar to work
  * [SETUP-CHROME] Change these if you trust and use a privacy respecting search engine
@@ -934,7 +934,7 @@ user_pref("browser.tabs.warnOnOpen", true);
 /* APPEARANCE ***/
    // user_pref("browser.download.autohideButton", false); // [FF57+]
    // user_pref("toolkit.cosmeticAnimations.enabled", false); // [FF55+]
-   // user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // [FF68+] allow userChrome/userContent
+user_pref("toolkit.legacyUserProfileCustomizations.stylesheets", true); // [FF68+] allow userChrome/userContent
 /* CONTENT BEHAVIOR ***/
 // user_pref("accessibility.typeaheadfind", true); // enable "Find As You Type"
    // user_pref("clipboard.autocopy", false); // disable autocopy default [LINUX]

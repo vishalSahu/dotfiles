@@ -9,6 +9,16 @@
 }
 */
 
+/*
+ * no tab bar when using addons like sidebery or tree style tabs
+ * comment if not using any vertical tabs addon
+ * https://0x63.me/hiding-firefox-tab-bar/
+ */
+#TabsToolbar {
+  visibility: collapse !important;
+}
+
+
 .tab-bottom-line {
   /* no bottom line */
   display:none!important;
