@@ -1,0 +1,283 @@
+/*****************************************************************************
+ * Styling for Dark Theme                                                    *
+ *                                                                           *
+ * Rendered Markdown                                                         *
+ * Application styling is defined in `userchrome.css`                        *
+ *****************************************************************************/
+
+:root {
+	--font-size:                      13px;
+	--mark-bgcolor:                   #BBDD66;          /* greenish */
+	--search-result-bgcolor:          #F3B717;          /* amber */
+	--current-search-result-bgcolor:  #CF3F00;          /* red */
+	--current-search-result-bgcolor:  #2e2e2d;          /* red */
+	--preformatted-text-bgcolor:      #282c34;          /* darkgray */
+	--heading-bgcolor:                #444444;          /* gray */
+  --heading-print-bgcolor:          #eeeeee;          /* lightgray */
+  /* custom settings */
+	--body-font-size: 15px;
+  --font-sans: "Lato";
+  --font-fixed: "JetBrains Mono";
+  --font-weight-base: 300;
+  --font-weight-medium: 400;
+  --font-weight-bold: 500;
+  --font-line-height: 1.1em;
+
+  --dark-white: #c3c3c3;
+  /*--dark-blue: #16222e;*/
+  --dark-blue: #002734;
+  --dark-grey: #262b31;
+  --darker-grey: #1D2024;
+
+  --base-size-1: 1px;
+  --base-size-4: 4px;
+  --base-size-8: 8px;
+  --base-size-13: 13px;
+  --base-size-16: 16px;
+  --base-size-18: 18px;
+  --base-size-24: 24px;
+  --base-size-28: 28px;
+  --base-size-32: 32px;
+  --base-size-36: 36px;
+  --base-size-40: 40px;
+}
+
+/*------ Padding ------------------------------------------------------------*/
+#rendered-md {
+  padding-left: 8%;
+  padding-right: 10%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+/*---------------------------------------------------------------------------*/
+
+/*------ Change the font size to 13px ---------------------------------------*/
+body, th, td, .inline-code {
+  font-size: var(--body-font-size);
+  letter-spacing: 0.08em;
+}
+/*---------------------------------------------------------------------------*/
+
+/*------ Change the font and background --------------------------------------*/
+body, th, td, .inline-code {
+  font-family: var(--font-sans) !important;
+  font-weight: var(--font-weight-base) !important;
+  background-color: var(--dark-blue);
+  color: var(--dark-white) !important;
+}
+/*---------------------------------------------------------------------------*/
+
+/*------ Colors for different mark tags -------------------------------------*/
+/* ==mark== */
+mark {
+	background-color: var(--mark-bgcolor);
+	padding:      1px 2px;
+}
+/* occurrences of search term */
+mark[data-markjs] {
+	background-color: var(--search-result-bgcolor);
+	padding:      0;
+}
+/* current search term (local search) */
+mark[data-markjs].mark-selected {
+	background-color: var(--current-search-result-bgcolor);
+}
+/*---------------------------------------------------------------------------*/
+
+/*------ align checkbox to the first line (baseline) ------------------------*/
+li.md-checkbox .checkbox-wrapper {
+	align-items: baseline;
+}
+/*---------------------------------------------------------------------------*/
+
+/*------ Add background and padding to preformatted text --------------------*/
+pre {
+	padding:  0.5em;
+	background: var(--preformatted-text-bgcolor);
+}
+/*---------------------------------------------------------------------------*/
+
+/*------ Headings -----------------------------------------------------------*/
+h1, h2, h3, h4, h5 {
+  font-weight: var(--font-weight-medium) !important;
+  letter-spacing: 0.02em;
+  margin-top: var(--base-size-24);
+  margin-bottom: var(--base-size-1);
+}
+
+h1 {
+  font-size: var(--base-size-36) !important;
+  /* font-weight: var(--font-weight-bold) !important; */
+  line-height: var(--font-line-height) !important;
+  margin-top: var(--base-size-24) !important;
+  border-bottom: none !important;
+}
+
+h1:first-child {
+  margin-top: 0px !important;
+}
+
+h2 {
+  font-size: var(--base-size-24);
+}
+
+h3, h4 {
+  font-size: var(--base-size-18);
+}
+
+h5 {
+  font-size: var(--base-size-16);
+}
+/*---------------------------------------------------------------------------*/
+
+/*------------ code blocks --------------------------------------------------*/
+pre {
+  font-family: var(--font-mono) !important;
+  border-radius: var(--base-size-4) !important;
+  border: 0.04em solid #444444 !important;
+  background-color: #1c1e20 !important;
+  padding: .5em .5em !important;
+}
+/*---------------------------------------------------------------------------*/
+
+/*------------ inline code --------------------------------------------------*/
+.inline-code {
+  font-family: var(--font-fixed) !important;
+  padding: .15em .15em !important;
+  border-radius: var(--base-size-4) !important;
+  background-color: #1c1e20 !important;
+  border: None !important;
+  color: #5f84ce !important;
+}
+/*---------------------------------------------------------------------------*/
+
+/*------ Headings: Use nested counters --------------------------------------*/
+body { counter-reset: h2counter; }
+h2 { counter-reset: h3counter; }
+h3 { counter-reset: h4counter; }
+h4 { counter-reset: h5counter; }
+h5 { counter-reset: h6counter; }
+h6 {}
+
+h2:before {
+	counter-increment: h2counter;
+	content: counter(h2counter) ".\0000a0\0000a0";
+}
+
+h3:before {
+	counter-increment: h3counter;
+	content: counter(h2counter) "." counter(h3counter) ".\0000a0\0000a0";
+}
+
+h4:before {
+	counter-increment: h4counter;
+	content: counter(h2counter) "." counter(h3counter) "." counter(h4counter) ".\0000a0\0000a0";
+}
+
+h5:before {
+	counter-increment: h5counter;
+	content: counter(h2counter) "." counter(h3counter) "." counter(h4counter) "." counter(h5counter) ".\0000a0\0000a0";
+}
+
+h6:before {
+	counter-increment: h6counter;
+	content: counter(h2counter) "." counter(h3counter) "." counter(h4counter) "." counter(h5counter) "." counter(h6counter) ".\0000a0\0000a0";
+}
+
+/*---------------------------------------------------------------------------*/
+
+/*------ TOC: Use nested counters for list items ----------------------------*/
+.table-of-contents ol {
+	counter-reset: list-item;
+}
+.table-of-contents li {
+	display: block; counter-increment: list-item;
+}
+.table-of-contents li:before {
+	content: counters(list-item,'.') '.\0000a0';
+}
+/*---------------------------------------------------------------------------*/
+
+/*------ TOC: Make TOC a fixed height and scrollable ------------------------*/
+/*
+.table-of-contents {
+	overflow-y: auto;
+	height: 18em;
+}
+*/
+/*---------------------------------------------------------------------------*/
+
+/*------ Katex: Make font (symbols and formulas) bigger ---------------------*/
+/*
+.katex {
+	font-size: 1.6em;
+}
+*/
+/*---------------------------------------------------------------------------*/
+
+/*------ set general link color (includes TOC links) ------------------------*/
+/*
+a {
+	color: #a6a6ff;
+}
+*/
+/*---------------------------------------------------------------------------*/
+
+/*------ change the color of INTERNAL links ---------------------------------*/
+/*
+a[data-resource-id] {
+	color: #d28fff;
+}
+*/
+/*---------------------------------------------------------------------------*/
+
+/*------ change other resource link icons color to internal link color ------*/
+/*
+.resource-icon {
+	background-color: #d28fff;
+}
+*/
+/*---------------------------------------------------------------------------*/
+
+/*------ do not display the Joplin resource icon ----------------------------*/
+/*
+.resource-icon.fa-joplin {
+	display: none;
+}
+*/
+/*---------------------------------------------------------------------------*/
+
+/*------ Better alignment for resource icons --------------------------------*/
+.resource-icon {
+	top: .4em !important;
+}
+/*---------------------------------------------------------------------------*/
+
+/*------ thinner outline for links and sections -----------------------------*/
+a, summary {
+	outline-width: 3px;
+}
+/*---------------------------------------------------------------------------*/
+
+/*------ no outline for sections --------------------------------------------*/
+summary {
+	outline: none;
+}
+/*---------------------------------------------------------------------------*/
+
+/*------ Print: Adjustments for printing and PDF export ---------------------*/
+@media print {
+
+	/* reset background and padding for preformatted text */
+	pre {
+		padding: unset;
+		background: unset;
+	}
+
+	/* lighter background for headings */
+	h1, h2, h3, h4, h5, h6 {
+		background-color: var(--heading-print-bgcolor);
+	}
+
+}
+/*---------------------------------------------------------------------------*/
