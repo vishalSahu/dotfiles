@@ -2,16 +2,17 @@
 autoload -Uz compinit
 compinit
 
-# auto suggestions
-source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
+# zsh auto-suggestions
+# https://github.com/zsh-users/zsh-autosuggestions/blob/master/INSTALL.md
+source /usr/local/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 
 # User configuration
 
-# bind keys
-#bindkey '[D' backward-word
-#bindkey '[C' forward-word
+# bind keys (https://stackoverflow.com/a/12403798)
+bindkey '[D' backward-word
+bindkey '[C' forward-word
 
 bindkey \^U backward-kill-line
 
