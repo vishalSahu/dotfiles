@@ -20,6 +20,7 @@
         // "comments": "#6d6d6d"  // override comment color from the theme
     },
     "editor.wordWrap": "off", // use vim <gq> command instead
+    "editor.matchBrackets": "near",
 
     "explorer.openEditors.visible": 0,
     "explorer.confirmDragAndDrop": false,
