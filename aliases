@@ -4,8 +4,9 @@ alias grep="grep --color=auto"
 alias rg="rg -np"
 alias hist="history"
 alias j="jobs -l"
-alias du="du -kh"  # Makes a more readable output.
 alias df="df -kTh"
+alias du="ncdu --color dark -rr -x"
+alias cat="bat -n"
 
 
 # Detect which `ls` flavor is in use
@@ -51,7 +52,7 @@ alias afk="open -a ScreenSaverEngine"
 alias finder="open -a Finder ."
 
 # bat (https://github.com/sharkdp/bat)
-alias bat="bat --theme='OneHalfDark'"
+alias bat="bat --theme=base16"
 
 # htop (hisham.hm/htop/)
 alias top="htop"
@@ -61,6 +62,8 @@ alias httpr="http --style=native --pretty=colors -b"
 
 # View man pages in Preview
 #alias pman="ps=`mktemp -t $@`.ps && man -t $@ > "$ps" && open "$ps""
+
+alias qrencode="qrencode -t utf8"
 
 # hex - decimal conversion
 function tohex() {
