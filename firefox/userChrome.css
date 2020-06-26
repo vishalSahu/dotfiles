@@ -14,68 +14,92 @@
  * comment if not using any vertical tabs addon
  * https://0x63.me/hiding-firefox-tab-bar/
  */
+
 #TabsToolbar {
   visibility: collapse !important;
 }
 
 
-.tab-bottom-line {
-  /* no bottom line */
-  display:none!important;
-}
+/**
+ * My Custom Settings
+ */
 
-.tab-background {
-  /* rounded top corners */
-  border-radius: 4px 4px 0 0 !important;
-}
+/*
+ *.tab-bottom-line {
+ *  [> no bottom line <]
+ *  display:none!important;
+ *}
+ */
+
+/*
+ *.tab-background {
+ *  [> rounded top corners <]
+ *  border-radius: 4px 4px 0 0 !important;
+ *}
+ */
 
 /* tab setting for normal tabs */
-.tabbrowser-tab .tab-line {
-  background: gray !important;
-  transform:scaleX(.8)!important;
-  opacity:.4!important;
-  height:2px!important;
-  border-radius:0 0 2px 2px!important;
-  margin-top: 1px !important;
-}
+/*
+ *.tabbrowser-tab .tab-line {
+ *  background: gray !important;
+ *  transform:scaleX(.8)!important;
+ *  opacity:.4!important;
+ *  height:2px!important;
+ *  border-radius:0 0 2px 2px!important;
+ *  margin-top: 1px !important;
+ *}
+ */
 
 /* tab setting for container tabs */
-.tabbrowser-tab[usercontextid] .tab-line {
-  background:var(--identity-tab-color)!important;
-}
+/*
+ *.tabbrowser-tab[usercontextid] .tab-line {
+ *  background:var(--identity-tab-color)!important;
+ *}
+ */
 
 /* pinned tabs */
-.tabbrowser-tab[pinned] .tab-line {
-  transform:scaleX(.65)!important;
-}
+/*
+ *.tabbrowser-tab[pinned] .tab-line {
+ *  transform:scaleX(.65)!important;
+ *}
+ */
+
 /* .tabbrowser-tab[usercontextid][pinned] .tab-line{
   transform:scaleX(.9)!important;
 }
  */
+
 /* hover setting for not selected tab */
-.tabbrowser-tab:not([visuallyselected]):hover .tab-line {
-  border-radius:0!important;
-  height:2px!important;
-  transform:scaleX(1)!important;
-  opacity:.8!important;
-}
+/*
+ *.tabbrowser-tab:not([visuallyselected]):hover .tab-line {
+ *  border-radius:0!important;
+ *  height:2px!important;
+ *  transform:scaleX(1)!important;
+ *  opacity:.8!important;
+ *}
+ */
 
 /* settings for selected tab */
-.tabbrowser-tab[visuallyselected] .tab-line {
-  border-radius:0!important;
-  height:2px!important;
-  transform:scaleX(0.98)!important;
-  margin-top: 1px !important;
-  opacity:1!important;
-}
+/*
+ *.tabbrowser-tab[visuallyselected] .tab-line {
+ *  border-radius:0!important;
+ *  height:2px!important;
+ *  transform:scaleX(0.98)!important;
+ *  margin-top: 1px !important;
+ *  opacity:1!important;
+ *}
+ */
 
 /* tab loading animation */
-.tabbrowser-tab {
-  --tab-loading-fill:Highlight!important;
-}
-.tabbrowser-tab[usercontextid] {
-  --tab-loading-fill:var(--identity-tab-color)!important;
-}
+/*
+ *.tabbrowser-tab {
+ *  --tab-loading-fill:Highlight!important;
+ *}
+ *.tabbrowser-tab[usercontextid] {
+ *  --tab-loading-fill:var(--identity-tab-color)!important;
+ *}
+ */
+
 
 /* change up usercontext label; make container label more promiment in urlbar */
 /* #userContext-icons{
@@ -94,4 +118,72 @@
 #userContext-indicator[data-identity-icon="circle"]{
   display:none!important;
 } */
+
+
+/*** Megabar Styler General - version 2020-04-19 ***/
+/*** https://www.userchrome.org/megabar-styling-firefox-address-bar.html ***/
+
+  /*** General Preferences ***/
+  :root {
+    /* Number of pixels of enlargement when URL bar is focused */
+    --mbarstyler-popout-pixels: 0px; /* [0px - 7px] */
+
+    /* Top Bar Display or Not */
+    --mbarstyler-top-bar-display: block; /* [block,none] */
+
+    /* Font sizes (default: 13.8px for title, 10.2px for URL) */
+    --mbarstyler-title-font-size: 13px; /* [13px - 18px] */
+    --mbarstyler-url-font-size: 13px; /* [12px - 16px] */
+
+    /* Rows to show without scrolling */
+    --mbarstyler-max-rows-without-scrolling: 10;
+
+    /* Bottom border for each result row */
+    --mbarstyler-bottom-border-width: 1px; /* [0px or 1px] */
+
+    /* Match display style */
+    --mbarstyler-match-weight: 700; /* [400,700] */
+    --mbarstyler-match-background-opacity: 0.05; /* [0.0,0.05,0.1] */
+  }
+
+/*** Megabar Styler General - version 2020-04-19 ***/
+
+/*** BEGIN Firefox 77 (June 2, 2020) Override URL bar enlargement ***/
+
+  /* Compute new position, width, and padding */
+
+  #urlbar[breakout][breakout-extend] {
+    top: 5px !important;
+    left: 0px !important;
+    width: 100% !important;
+    padding: 0px !important;
+  }
+  /* for alternate Density settings */
+  [uidensity="compact"] #urlbar[breakout][breakout-extend] {
+    top: 3px !important;
+  }
+  [uidensity="touch"] #urlbar[breakout][breakout-extend] {
+    top: 4px !important;
+  }
+
+  /* Prevent shift of URL bar contents */
+
+  #urlbar[breakout][breakout-extend] > #urlbar-input-container {
+    height: var(--urlbar-height) !important;
+    padding: 0 !important;
+  }
+
+  /* Do not animate */
+
+  #urlbar[breakout][breakout-extend] > #urlbar-background {
+    animation: none !important;;
+  }
+
+  /* Remove shadows */
+
+  #urlbar[breakout][breakout-extend] > #urlbar-background {
+    box-shadow: none !important;
+  }
+
+/*** END Firefox 77 (June 2, 2020) Override URL bar enlargement ***/
 

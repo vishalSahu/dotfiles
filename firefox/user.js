@@ -835,7 +835,7 @@ user_pref("privacy.clearOnShutdown.downloads", true); // see note above
 user_pref("privacy.clearOnShutdown.formdata", true); // Form & Search History
 user_pref("privacy.clearOnShutdown.history", false); // Browsing & Download History
 user_pref("privacy.clearOnShutdown.offlineApps", false); // Offline Website Data
-user_pref("privacy.clearOnShutdown.sessions", true); // Active Logins
+user_pref("privacy.clearOnShutdown.sessions", false); // Active Logins
 user_pref("privacy.clearOnShutdown.siteSettings", false); // Site Preferences
 /* 2804: reset default items to clear with Ctrl-Shift-Del (to match 2803) [SETUP-CHROME]
  * This dialog can also be accessed from the menu History>Clear Recent History
@@ -849,7 +849,7 @@ user_pref("privacy.cpd.formdata", true); // Form & Search History
 user_pref("privacy.cpd.history", true); // Browsing & Download History
 user_pref("privacy.cpd.offlineApps", true); // Offline Website Data
 user_pref("privacy.cpd.passwords", false); // this is not listed
-user_pref("privacy.cpd.sessions", true); // Active Logins
+user_pref("privacy.cpd.sessions", false); // Active Logins
 user_pref("privacy.cpd.siteSettings", false); // Site Preferences
 /* 2805: clear Session Restore data when sanitizing on shutdown or manually [FF34+]
  * [NOTE] Not needed if Session Restore is not used (see 0102) or is already cleared with history (see 2803)
@@ -946,11 +946,6 @@ user_pref("browser.tabs.closeWindowWithLastTab", true);
 user_pref("browser.tabs.loadBookmarksInTabs", true); // open bookmarks in a new tab [FF57+]
 user_pref("browser.ctrlTab.recentlyUsedOrder", false);
 user_pref("browser.warnOnQuit", true);
-// disable new urlbar
-user_pref("browser.urlbar.update1", false);
-user_pref("browser.urlbar.update1.interventions", false);
-user_pref("browser.urlbar.update1.searchTips", false);
-user_pref("browser.urlbar.update1.view.stripHttps", false);
    // user_pref("general.autoScroll", false); // middle-click enabling auto-scrolling [DEFAULT: false on Linux]
    // user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar [RESTART]
    // user_pref("view_source.tab", false); // view "page/selection source" in a new window [FF68+, FF59 and under]
@@ -992,3 +987,4 @@ user_pref("services.sync.syncThreshold", 300);
 
 /* END: internal custom pref to test for syntax errors ***/
 user_pref("_user.js.parrot", "SUCCESS: No no he's not dead, he's, he's restin'!");
+
