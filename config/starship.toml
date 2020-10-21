@@ -1,0 +1,48 @@
+# https://starship.rs/config/#prompt
+
+# Don't print a new line at the start of the prompt
+
+add_newline = false
+
+# Wait 10 milliseconds for starship to check files under the current directory.
+
+scan_timeout = 10
+
+prompt_order = [
+  "directory",
+  "git_branch",
+  "git_state",
+  #"git_status",
+  "cmd_duration",
+  "battery",
+  "time",
+  "character",
+]
+
+# Replace the "❯" symbol in the prompt with "➜"
+
+[character]      # The name of the module we are configuring is "character"
+symbol = "➜"     # The "symbol" segment is being set to "➜"
+
+[directory]
+prefix = "in "
+truncate_to_repo = false
+truncation_length = 5
+fish_style_pwd_dir_length = 1
+
+[[battery.display]]  # "bold red" style when capacity is between 0% and 10%
+threshold = 10
+style = "bold red"
+
+[[battery.display]]  # "bold yellow" style when capacity is between 10% and 30%
+threshold = 30
+style = "bold yellow"
+
+[time]
+disabled = false
+
+# Disable the package module, hiding it from the prompt completely
+
+[package]
+disabled = true
+
