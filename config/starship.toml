@@ -1,26 +1,24 @@
 # https://starship.rs/config/#prompt
 
 # Don't print a new line at the start of the prompt
-
 add_newline = false
 
 # Wait 10 milliseconds for starship to check files under the current directory.
-
 scan_timeout = 10
 
 prompt_order = [
+  "time",
   "directory",
   "git_branch",
   "git_state",
   #"git_status",
   "cmd_duration",
+  #"line_break",
   "battery",
-  "time",
   "character",
 ]
 
 # Replace the "❯" symbol in the prompt with "➜"
-
 [character]      # The name of the module we are configuring is "character"
 symbol = "➜"     # The "symbol" segment is being set to "➜"
 
@@ -40,9 +38,10 @@ style = "bold yellow"
 
 [time]
 disabled = false
+format = "%r"
 
 # Disable the package module, hiding it from the prompt completely
-
 [package]
 disabled = true
+
 
