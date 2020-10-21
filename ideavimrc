@@ -136,10 +136,10 @@ autocmd BufReadPost *
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " mappings
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"let mapleader = "\<Space>"
+let mapleader = " "
 "let g:mapleader = "\<Space>"
-let mapleader='^z'
-let maplocalleader = '^z'
+"let mapleader='^z'
+"let maplocalleader = '^z'
 
 " turn off highlighting and clear any message already displayed.
 nnoremap <silent> <leader><CR> :nohls<Bar>:echo<CR>
@@ -201,15 +201,29 @@ nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
 " intellij mappings: https://stackoverflow.com/q/31970413
-" complete keymap here: https://anotepad.com/notes/7g8gn4
-
-" useful mappings for managing tabs
-nnoremap <leader>n :action NextEditorTab<CR>
-nnoremap <leader>p :action PreviousEditorTab<CR>
-nnoremap <leader>x :action CloseActiveTab<CR>
+" invoke command 'actionlist' to get all actions
 
 " intellij mappings
+nnoremap <leader>j :action QuickJavaDoc<CR>
 nnoremap <leader>b :action GotoDeclaration<CR>
-nnoremap <leader>q :action GuiDesigner.QuickJavadoc<CR>
 nnoremap <leader>p :action ParameterInfo<CR>
+nnoremap <leader>[ :action EditorCodeBlockStart<CR>
+nnoremap <leader>] :action EditorCodeBlockEnd<CR>
+nnoremap g; :action JumpToLastChange<CR>
+nnoremap g, :action JumpToNextChange<CR>
+
+" debugging shortcuts dont' work :(
+"nnoremap <A-dd> :action Debug<CR>
+"nnoremap <A-s> :action StepInto<CR>
+nnoremap <A-S-s> :action SmartStepInto<CR> "step
+nnoremap <A-S-n> :action StepOver<CR> "next
+nnoremap <A-S-f> :action StepOut<CR> "finish
+nnoremap <A-S-c> :action Resume<CR> "continue
+nnoremap <A-S-q> :action Stop<CR> "quit
+nnoremap <A-S-u> :action RunToCursor<CR> "until
+nnoremap <A-S-i> :action EvaluateExpression<CR> "info XX
+nnoremap <A-S-b> :action ViewBreakpoints<CR>
+nnoremap <A-S-t> :action ToggleBreakpointEnabled<CR>
+
 set ideajoin
+
