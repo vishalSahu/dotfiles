@@ -946,6 +946,11 @@ user_pref("browser.tabs.closeWindowWithLastTab", true);
 user_pref("browser.tabs.loadBookmarksInTabs", true); // open bookmarks in a new tab [FF57+]
 user_pref("browser.ctrlTab.recentlyUsedOrder", false);
 user_pref("browser.warnOnQuit", true);
+// disable new urlbar
+user_pref("browser.urlbar.update1", false);
+user_pref("browser.urlbar.update1.interventions", false);
+user_pref("browser.urlbar.update1.searchTips", false);
+user_pref("browser.urlbar.update1.view.stripHttps", false);
    // user_pref("general.autoScroll", false); // middle-click enabling auto-scrolling [DEFAULT: false on Linux]
    // user_pref("ui.key.menuAccessKey", 0); // disable alt key toggling the menu bar [RESTART]
    // user_pref("view_source.tab", false); // view "page/selection source" in a new window [FF68+, FF59 and under]
@@ -971,6 +976,11 @@ user_pref("reader.line_height", 5);
    // user_pref("xpinstall.signatures.required", false); // enforced extension signing (Nightly/ESR)
 user_pref("privacy.donottrackheader.enabled", false);
 user_pref("privacy.trackingprotection.enabled", true);
+user_pref("privacy.firstparty.isolate", true);
+
+// This prevents websites from getting notifications if you copy, paste, or cut something from the page.
+user_pref("dom.event.clipboardevents.enabled", false);
+
 user_pref("network.trr.custom_uri", "https://dns.nextdns.io/59719f");
 user_pref("network.trr.mode", 2);
 user_pref("network.trr.uri", "https://dns.nextdns.io/59719f");
