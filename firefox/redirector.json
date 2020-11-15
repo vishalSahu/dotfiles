@@ -1,26 +1,9 @@
 {
     "createdBy": "Redirector v3.5.3",
-    "createdAt": "2020-04-29T06:54:15.168Z",
+    "createdAt": "2020-11-15T19:12:52.200Z",
     "redirects": [
         {
-            "description": "Example redirect, try going to http://example.com/anywordhere",
-            "exampleUrl": "http://example.com/some-word-that-matches-wildcard",
-            "exampleResult": "https://google.com/search?q=some-word-that-matches-wildcard",
-            "error": null,
-            "includePattern": "http://example.com/*",
-            "excludePattern": "",
-            "patternDesc": "Any word after example.com leads to google search for that word.",
-            "redirectUrl": "https://google.com/search?q=$1",
-            "patternType": "W",
-            "processMatches": "noProcessing",
-            "disabled": false,
-            "grouped": false,
-            "appliesTo": [
-                "main_frame"
-            ]
-        },
-        {
-            "description": "Youtube",
+            "description": "hooktube",
             "exampleUrl": "https://www.youtube.com/",
             "exampleResult": "https://hooktube.com/",
             "error": null,
@@ -33,25 +16,60 @@
             "disabled": true,
             "grouped": false,
             "appliesTo": [
-                "main_frame"
+                "sub_frame"
             ]
         },
         {
-            "description": "Youtube",
+            "description": "invidious.tube",
             "exampleUrl": "https://www.youtube.com/watch?v=123",
-            "exampleResult": "https://invidio.us/watch?v=123",
+            "exampleResult": "https://invidious.tube/watch?v=123",
             "error": null,
             "includePattern": "http[s]?://[w]?[w]?[w]?.?youtube.com/(.*)",
             "excludePattern": "",
             "patternDesc": "",
-            "redirectUrl": "https://invidio.us/$1",
+            "redirectUrl": "https://invidious.tube/$1",
             "patternType": "R",
             "processMatches": "noProcessing",
-            "disabled": false,
+            "disabled": true,
             "grouped": false,
             "appliesTo": [
                 "main_frame",
-                "sub_frame",
+                "xmlhttprequest"
+            ]
+        },
+        {
+            "description": "invidious.snopyta.org",
+            "exampleUrl": "https://www.youtube.com/watch?v=123",
+            "exampleResult": "https://invidious.snopyta.org/watch?v=123",
+            "error": null,
+            "includePattern": "http[s]?://[w]?[w]?[w]?.?youtube.com/(.*)",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://invidious.snopyta.org/$1",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": true,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame",
+                "xmlhttprequest"
+            ]
+        },
+        {
+            "description": "invidious.xyz",
+            "exampleUrl": "https://www.youtube.com/watch?v=123",
+            "exampleResult": "https://invidious.xyz/watch?v=123",
+            "error": null,
+            "includePattern": "http[s]?://[w]?[w]?[w]?.?youtube.com/(.*)",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://invidious.xyz/$1",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": true,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame",
                 "xmlhttprequest"
             ]
         },
