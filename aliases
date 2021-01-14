@@ -64,6 +64,7 @@ alias httpr="http --style=native --pretty=colors -b"
 #alias pman="ps=`mktemp -t $@`.ps && man -t $@ > "$ps" && open "$ps""
 
 alias qrencode="qrencode -t utf8"
+alias typora="open -a typora"
 
 # hex - decimal conversion
 function tohex() {

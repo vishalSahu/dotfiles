@@ -1,0 +1,13 @@
+/*
+ * https://support.typora.io/
+ * */
+body {
+  font-family: 'Roboto', sans-serif;
+  font-family: 'Inter', serif;
+  --monospace: 'Fira Code'
+}
+
+#write {
+  max-width: 75%; /*adjust writing area position*/
+}
+
