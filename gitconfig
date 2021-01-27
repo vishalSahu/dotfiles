@@ -1,6 +1,9 @@
 [push]
 	default = upstream
 
+[pull]
+	ff = only
+
 [remote "origin"]
   # clone without tags (https://stackoverflow.com/a/44011502)
 	tagopt = --no-tags
