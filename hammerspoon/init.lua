@@ -165,15 +165,11 @@ Install:andUse("AClock", {
 })
 
 Install:andUse("KSheet", {
-    -- bindHotKeys doesn't work :(
-    -- hotkeys = {
-    --     toggle = { { "alt" }, "K" },
-    -- },
     fn = function(s)
         hs.hotkey.bind({"alt"}, "K", function()
             spoon.KSheet:show()
         end)
-        hs.hotkey.bind({"alt", "shift"}, "K", function()
+        hs.hotkey.bind({"ctrl", "alt"}, "K", function()
             spoon.KSheet:hide()
         end)
     end,
