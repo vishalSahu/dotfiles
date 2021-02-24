@@ -1,0 +1,23 @@
+{
+  "allowedDomainsGoogleFonts": {},
+  "amountInjected": 2838,
+  "badgeColor": "#4A826C",
+  "badgeTextColor": "#FFFFFF",
+  "blockGoogleFonts": true,
+  "blockMissing": false,
+  "disablePrefetch": true,
+  "domainsManipulateDOM": {},
+  "enableLogging": true,
+  "enforceStaging": false,
+  "hideReleaseNotes": false,
+  "internalStatistics": false,
+  "internalStatisticsData": {},
+  "lastMappingUpdate": "2020-01-01",
+  "negateHtmlFilterList": false,
+  "selectedIcon": "Default",
+  "showIconBadge": true,
+  "storageType": "sync",
+  "stripMetadata": true,
+  "updateNotification": 1,
+  "xhrTestDomain": "localcdn.org"
+}

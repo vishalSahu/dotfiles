@@ -1,11 +1,36 @@
 {
   "default": [
     {
+      "expression": "*.accounts.google.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cookieNames": [],
+      "id": "mK2S-36_bf9",
+      "cleanSiteData": []
+    },
+    {
       "expression": "*.amazon.com",
       "listType": "WHITE",
       "storeId": "default",
       "cookieNames": [],
-      "id": "VE-BihI1Rh"
+      "id": "90Nd4EBAR",
+      "cleanSiteData": []
+    },
+    {
+      "expression": "*.att.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "eEuFOcBTC"
+    },
+    {
+      "expression": "*.google.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cookieNames": [],
+      "id": "pbctRD85HlV",
+      "cleanSiteData": []
     },
     {
       "expression": "*.invidio.us",
@@ -13,70 +38,104 @@
       "storeId": "default",
       "cleanLocalStorage": false,
       "cookieNames": [],
-      "id": "Q1t1i25Cw"
+      "id": "Bemg3NYEbw",
+      "cleanSiteData": []
     },
     {
       "expression": "*.login.xfinity.com",
       "listType": "WHITE",
       "storeId": "default",
       "cookieNames": [],
-      "id": "B94R7I4t"
+      "id": "BP_arHaTlX",
+      "cleanSiteData": []
+    },
+    {
+      "expression": "*.logon.vanguard.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "qVAEnDOOv"
     },
     {
       "expression": "*.mychart.stanfordchildrens.org",
       "listType": "WHITE",
       "storeId": "default",
       "cookieNames": [],
-      "id": "O9LfQofG"
+      "id": "ngygVtmgeG",
+      "cleanSiteData": []
     },
     {
       "expression": "*.myuhc.com",
       "listType": "WHITE",
       "storeId": "default",
       "cookieNames": [],
-      "id": "qN-Yiweu8"
+      "id": "X1zb_04K1Q",
+      "cleanSiteData": []
     },
     {
       "expression": "*.rba-ose.myuhc.com",
       "listType": "WHITE",
       "storeId": "default",
       "cookieNames": [],
-      "id": "1SacTEd5K"
+      "id": "Ivo4hgESb3",
+      "cleanSiteData": []
+    },
+    {
+      "expression": "*.signin.att.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "GxXXzgVoz"
     },
     {
       "expression": "*.stanfordchildrens.org",
       "listType": "WHITE",
       "storeId": "default",
       "cookieNames": [],
-      "id": "tLgQubGO"
+      "id": "kB7OLscD1p",
+      "cleanSiteData": []
+    },
+    {
+      "expression": "*.vanguard.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "ny62H6HG8"
     },
     {
       "expression": "*.xfinity.com",
       "listType": "WHITE",
       "storeId": "default",
       "cookieNames": [],
-      "id": "i00u4C9r"
+      "id": "Y3b-nc_LqH",
+      "cleanSiteData": []
     },
     {
       "expression": "accounts.google.com",
       "listType": "WHITE",
       "storeId": "default",
-      "id": "mUvXOHbkZ",
-      "cookieNames": []
+      "id": "21QoKEcAYE",
+      "cookieNames": [],
+      "cleanSiteData": []
     },
     {
       "expression": "amazon.com",
       "listType": "WHITE",
       "storeId": "default",
       "cookieNames": [],
-      "id": "MRE0o2BiN"
+      "id": "5acv9e0Fxr",
+      "cleanSiteData": []
     },
     {
       "expression": "github.com",
       "listType": "WHITE",
       "storeId": "default",
-      "id": "3lsIQ-Bg26",
-      "cookieNames": []
+      "id": "xEvYHmKd2O",
+      "cookieNames": [],
+      "cleanSiteData": []
     },
     {
       "expression": "invidio.us",
@@ -84,49 +143,72 @@
       "storeId": "default",
       "cleanLocalStorage": false,
       "cookieNames": [],
-      "id": "G5eSjeK9F"
+      "id": "sCM3UlELL1",
+      "cleanSiteData": []
     },
     {
       "expression": "login.xfinity.com",
       "listType": "WHITE",
       "storeId": "default",
       "cookieNames": [],
-      "id": "WcuWuiNf"
+      "id": "d_j0C4X7ee",
+      "cleanSiteData": []
+    },
+    {
+      "expression": "logon.vanguard.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "_P70o6zgc"
     },
     {
       "expression": "mail.google.com",
       "listType": "WHITE",
       "storeId": "default",
-      "id": "xK27MRmZzw",
-      "cookieNames": []
+      "id": "73B28xrhFJ",
+      "cookieNames": [],
+      "cleanSiteData": []
     },
     {
       "expression": "mychart.stanfordchildrens.org",
       "listType": "WHITE",
       "storeId": "default",
       "cookieNames": [],
-      "id": "-6ax5elj"
+      "id": "G_hllGfIbh",
+      "cleanSiteData": []
     },
     {
       "expression": "personal.vanguard.com",
       "listType": "WHITE",
       "storeId": "default",
       "cookieNames": [],
-      "id": "N7NDqOiqjd"
+      "id": "jMI71BZlJ8",
+      "cleanSiteData": []
     },
     {
       "expression": "rba-ose.myuhc.com",
       "listType": "WHITE",
       "storeId": "default",
       "cookieNames": [],
-      "id": "G5YgUzkWM"
+      "id": "TqKRVqvPZpW",
+      "cleanSiteData": []
+    },
+    {
+      "expression": "signin.att.com",
+      "listType": "WHITE",
+      "storeId": "default",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "OflmbXyqp"
     },
     {
       "expression": "troweprice.com",
       "listType": "WHITE",
       "storeId": "default",
       "cookieNames": [],
-      "id": "whW5hF2Zx6"
+      "id": "SchyHGCgh33",
+      "cleanSiteData": []
     }
   ],
   "firefox-private": [
@@ -135,129 +217,349 @@
       "listType": "WHITE",
       "storeId": "firefox-private",
       "cookieNames": [],
-      "id": "_MlPK4n2M9"
+      "id": "6glsh_f6kY3",
+      "cleanSiteData": []
     },
     {
       "expression": "*.github.com",
       "listType": "WHITE",
       "storeId": "firefox-private",
       "cookieNames": [],
-      "id": "Cn2tlo-wx"
+      "id": "OihjssDZhI-",
+      "cleanSiteData": []
     },
     {
       "expression": "*.login.xfinity.com",
       "listType": "WHITE",
       "storeId": "firefox-private",
       "cookieNames": [],
-      "id": "U0fvmd3I"
+      "id": "A2NCulD_DXO",
+      "cleanSiteData": []
     },
     {
       "expression": "*.mychart.stanfordchildrens.org",
       "listType": "WHITE",
       "storeId": "firefox-private",
       "cookieNames": [],
-      "id": "kayji41C"
+      "id": "-gngaVdhHyU",
+      "cleanSiteData": []
     },
     {
       "expression": "*.stanfordchildrens.org",
       "listType": "WHITE",
       "storeId": "firefox-private",
       "cookieNames": [],
-      "id": "EKxmWxgB"
+      "id": "Psmc5OesoqW",
+      "cleanSiteData": []
     },
     {
       "expression": "*.troweprice.com",
       "listType": "WHITE",
       "storeId": "firefox-private",
       "cookieNames": [],
-      "id": "6v1ERt_Y"
+      "id": "gLTf0_Dv2v8",
+      "cleanSiteData": []
     },
     {
       "expression": "*.vanguard.com",
       "listType": "WHITE",
       "storeId": "firefox-private",
       "cookieNames": [],
-      "id": "WRP6ZDZ2V8"
+      "id": "kuLFrwWXUGG",
+      "cleanSiteData": []
     },
     {
       "expression": "*.xfinity.com",
       "listType": "WHITE",
       "storeId": "firefox-private",
       "cookieNames": [],
-      "id": "8nAbA19j"
+      "id": "aKKQ-sXdXQO",
+      "cleanSiteData": []
     },
     {
       "expression": "att.com",
       "listType": "WHITE",
       "storeId": "firefox-private",
       "cookieNames": [],
-      "id": "sB-20v_TbB"
+      "id": "noWrXDeEugs",
+      "cleanSiteData": []
     },
     {
       "expression": "bankofamerica.com",
       "listType": "WHITE",
       "storeId": "firefox-private",
       "cookieNames": [],
-      "id": "5iwe22cUmf"
+      "id": "9ZPEZ8dIegT",
+      "cleanSiteData": []
     },
     {
       "expression": "github.com",
       "listType": "WHITE",
       "storeId": "firefox-private",
       "cookieNames": [],
-      "id": "L7enh4w54"
+      "id": "1RQeEvLxe3c",
+      "cleanSiteData": []
     },
     {
       "expression": "login.xfinity.com",
       "listType": "WHITE",
       "storeId": "firefox-private",
       "cookieNames": [],
-      "id": "r0O8AxUy"
+      "id": "5wbYkBK5g2d",
+      "cleanSiteData": []
     },
     {
       "expression": "mychart.stanfordchildrens.org",
       "listType": "WHITE",
       "storeId": "firefox-private",
       "cookieNames": [],
-      "id": "3Pf7eK4B"
+      "id": "mlh1kUcPmvm",
+      "cleanSiteData": []
     },
     {
       "expression": "personal.vanguard.com",
       "listType": "WHITE",
       "storeId": "firefox-private",
       "cookieNames": [],
-      "id": "TcflwpDbHT"
+      "id": "bTw-fQavhDz",
+      "cleanSiteData": []
     },
     {
       "expression": "troweprice.com",
       "listType": "WHITE",
       "storeId": "firefox-private",
       "cookieNames": [],
-      "id": "ptWG5te7"
+      "id": "spOxr1DKHyt",
+      "cleanSiteData": []
     }
   ],
-  "firefox-container-1": [],
   "firefox-container-6": [
-    {
-      "expression": "*.accounts.google.com",
-      "listType": "WHITE",
-      "storeId": "firefox-container-6",
-      "cookieNames": [],
-      "id": "DRJ-2dMGz"
-    },
     {
       "expression": "*.google.com",
       "listType": "WHITE",
       "storeId": "firefox-container-6",
+      "cleanSiteData": [],
       "cookieNames": [],
-      "id": "XVOLQIX2Z"
+      "id": "ERC-XzZ3u"
+    },
+    {
+      "expression": "*.mail.google.com",
+      "listType": "WHITE",
+      "storeId": "firefox-container-6",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "uhKCA8OoC"
     },
     {
       "expression": "accounts.google.com",
       "listType": "WHITE",
       "storeId": "firefox-container-6",
+      "cleanSiteData": [],
       "cookieNames": [],
-      "id": "_BUh9pBaC"
+      "id": "1wOkwa3WD"
+    },
+    {
+      "expression": "mail.google.com",
+      "listType": "WHITE",
+      "storeId": "firefox-container-6",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "weQdyXnnF"
+    }
+  ],
+  "firefox-container-1": [
+    {
+      "expression": "*.att.com",
+      "listType": "WHITE",
+      "storeId": "firefox-container-1",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "BMgaRIUNr"
+    },
+    {
+      "expression": "*.login.xfinity.com",
+      "listType": "WHITE",
+      "storeId": "firefox-container-1",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "J1n2cicw0o"
+    },
+    {
+      "expression": "*.mychart.stanfordchildrens.org",
+      "listType": "WHITE",
+      "storeId": "firefox-container-1",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "80f0hYo2g"
+    },
+    {
+      "expression": "*.signin.att.com",
+      "listType": "WHITE",
+      "storeId": "firefox-container-1",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "rcEHjRtW7"
+    },
+    {
+      "expression": "*.stanfordchildrens.org",
+      "listType": "WHITE",
+      "storeId": "firefox-container-1",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "timkp3Kbp"
+    },
+    {
+      "expression": "*.xfinity.com",
+      "listType": "WHITE",
+      "storeId": "firefox-container-1",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "7ji-tqo64"
+    },
+    {
+      "expression": "login.xfinity.com",
+      "listType": "WHITE",
+      "storeId": "firefox-container-1",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "2_2XqC10m"
+    },
+    {
+      "expression": "mychart.stanfordchildrens.org",
+      "listType": "WHITE",
+      "storeId": "firefox-container-1",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "j0XuIHWmp6"
+    },
+    {
+      "expression": "signin.att.com",
+      "listType": "WHITE",
+      "storeId": "firefox-container-1",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "z4mRTYhvW"
+    }
+  ],
+  "firefox-container-129": [
+    {
+      "expression": "*.signin.att.com",
+      "listType": "WHITE",
+      "storeId": "firefox-container-129",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "U5ZRzdv_r"
+    },
+    {
+      "expression": "signin.att.com",
+      "listType": "WHITE",
+      "storeId": "firefox-container-129",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "m5xPAJhQB"
+    }
+  ],
+  "firefox-container-3": [
+    {
+      "expression": "*.chase.com",
+      "listType": "WHITE",
+      "storeId": "firefox-container-3",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "4YstKFK__"
+    },
+    {
+      "expression": "*.logon.vanguard.com",
+      "listType": "WHITE",
+      "storeId": "firefox-container-3",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "XYpOWGUR_"
+    },
+    {
+      "expression": "*.secure07a.chase.com",
+      "listType": "WHITE",
+      "storeId": "firefox-container-3",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "9uLN7KSuK"
+    },
+    {
+      "expression": "*.troweprice.com",
+      "listType": "WHITE",
+      "storeId": "firefox-container-3",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "3FkUDWoF--"
+    },
+    {
+      "expression": "*.vanguard.com",
+      "listType": "WHITE",
+      "storeId": "firefox-container-3",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "qRKoBG3Aa"
+    },
+    {
+      "expression": "logon.vanguard.com",
+      "listType": "WHITE",
+      "storeId": "firefox-container-3",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "wLelkGCPX"
+    },
+    {
+      "expression": "secure07a.chase.com",
+      "listType": "WHITE",
+      "storeId": "firefox-container-3",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "9dUJb31-F"
+    },
+    {
+      "expression": "troweprice.com",
+      "listType": "WHITE",
+      "storeId": "firefox-container-3",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "Gz92KS1_u"
+    }
+  ],
+  "firefox-container-555": [],
+  "firefox-container-8": [
+    {
+      "expression": "*.amazon.com",
+      "listType": "WHITE",
+      "storeId": "firefox-container-8",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "Aw0kXnKSC"
+    },
+    {
+      "expression": "amazon.com",
+      "listType": "WHITE",
+      "storeId": "firefox-container-8",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "QOOHamDPR"
+    }
+  ],
+  "firefox-container-7": [
+    {
+      "expression": "*.teddit.net",
+      "listType": "WHITE",
+      "storeId": "firefox-container-7",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "w8AyN8zVG"
+    },
+    {
+      "expression": "teddit.net",
+      "listType": "WHITE",
+      "storeId": "firefox-container-7",
+      "cleanSiteData": [],
+      "cookieNames": [],
+      "id": "CW-A8tSHl"
     }
   ]
 }

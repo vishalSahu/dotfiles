@@ -85,7 +85,7 @@
                 "useFont": false,
                 "fontFamily": "Helvetica Neue",
                 "textStroke": 0,
-                "engine": "svgFilter",
+                "engine": "dynamicTheme",
                 "stylesheet": "",
                 "darkSchemeBackgroundColor": "#181a1b",
                 "darkSchemeTextColor": "#e8e6e3",
@@ -122,6 +122,102 @@
             "url": [
                 "mychart.stanfordchildrens.org"
             ]
+        },
+        {
+            "theme": {
+                "mode": 1,
+                "brightness": 90,
+                "contrast": 90,
+                "grayscale": 0,
+                "sepia": 0,
+                "useFont": false,
+                "fontFamily": "Helvetica Neue",
+                "textStroke": 0,
+                "engine": "cssFilter",
+                "stylesheet": "",
+                "darkSchemeBackgroundColor": "#181a1b",
+                "darkSchemeTextColor": "#e8e6e3",
+                "lightSchemeBackgroundColor": "#dcdad7",
+                "lightSchemeTextColor": "#181a1b",
+                "scrollbarColor": "",
+                "selectionColor": "auto",
+                "styleSystemControls": true
+            },
+            "url": [
+                "www.instapaper.com"
+            ]
+        },
+        {
+            "theme": {
+                "mode": 1,
+                "brightness": 90,
+                "contrast": 90,
+                "grayscale": 0,
+                "sepia": 0,
+                "useFont": false,
+                "fontFamily": "Helvetica Neue",
+                "textStroke": 0,
+                "engine": "svgFilter",
+                "stylesheet": "",
+                "darkSchemeBackgroundColor": "#181a1b",
+                "darkSchemeTextColor": "#e8e6e3",
+                "lightSchemeBackgroundColor": "#dcdad7",
+                "lightSchemeTextColor": "#181a1b",
+                "scrollbarColor": "",
+                "selectionColor": "auto",
+                "styleSystemControls": true
+            },
+            "url": [
+                "www.att.com"
+            ]
+        },
+        {
+            "theme": {
+                "mode": 1,
+                "brightness": 90,
+                "contrast": 80,
+                "grayscale": 0,
+                "sepia": 0,
+                "useFont": false,
+                "fontFamily": "Helvetica Neue",
+                "textStroke": 0,
+                "engine": "cssFilter",
+                "stylesheet": "",
+                "darkSchemeBackgroundColor": "#181a1b",
+                "darkSchemeTextColor": "#e8e6e3",
+                "lightSchemeBackgroundColor": "#dcdad7",
+                "lightSchemeTextColor": "#181a1b",
+                "scrollbarColor": "",
+                "selectionColor": "auto",
+                "styleSystemControls": true
+            },
+            "url": [
+                "secure.bankofamerica.com"
+            ]
+        },
+        {
+            "theme": {
+                "mode": 1,
+                "brightness": 84,
+                "contrast": 80,
+                "grayscale": 0,
+                "sepia": 0,
+                "useFont": false,
+                "fontFamily": "Helvetica Neue",
+                "textStroke": 0,
+                "engine": "cssFilter",
+                "stylesheet": "",
+                "darkSchemeBackgroundColor": "#181a1b",
+                "darkSchemeTextColor": "#e8e6e3",
+                "lightSchemeBackgroundColor": "#dcdad7",
+                "lightSchemeTextColor": "#181a1b",
+                "scrollbarColor": "",
+                "selectionColor": "auto",
+                "styleSystemControls": true
+            },
+            "url": [
+                "stackoverflow.com"
+            ]
         }
     ],
     "enableForPDF": true,
@@ -135,15 +231,17 @@
     "presets": [],
     "previewNewDesign": true,
     "siteList": [
-        "old.reddit.com"
+        "old.reddit.com",
+        "mail.google.com",
+        "192.168.1.1"
     ],
     "siteListEnabled": [],
     "syncSettings": true,
     "syncSitesFixes": false,
     "theme": {
         "mode": 1,
-        "brightness": 90,
-        "contrast": 90,
+        "brightness": 100,
+        "contrast": 95,
         "grayscale": 0,
         "sepia": 0,
         "useFont": false,
