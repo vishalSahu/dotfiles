@@ -226,7 +226,7 @@ if spoon.WinWin then
 		spoon.ModalMgr:deactivate({"resizeM"})
 	end)
 	cmodal:bind('', 'F', 'Fullscreen', function()
-		spoon.WinWin:moveAndResize("fullscreen")
+		hs.window.focusedWindow():toggleFullScreen()
 		spoon.ModalMgr:deactivate({"resizeM"})
 	end)
 	cmodal:bind('', 'M', 'Maximized', function()
