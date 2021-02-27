@@ -51,6 +51,10 @@
     "window.zoomLevel": 0,
 
     "workbench.activityBar.visible": true,
+    "workbench.editor.decorations.colors": true,
+    "workbench.editor.enablePreviewFromCodeNavigation": true,
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.editor.wrapTabs": true,
     "workbench.colorTheme": "Cobalt Next",
     "workbench.colorCustomizations": {
         // "editor.background": "#1f2329",
@@ -119,6 +123,7 @@
 
     // vim plugin
     "vim.easymotion": true,
+    "vim.foldfix": true,
     "vim.hlsearch": true,
     "vim.incsearch": true,
     "vim.leader": "<space>",
