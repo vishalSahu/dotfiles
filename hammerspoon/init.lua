@@ -25,7 +25,8 @@ end)
 -- windowHints
 hs.hints.showTitleThresh = 14
 hs.hints.titleMaxSize = 24
-hs.hints.fontSize = 18
+hs.hints.fontSize = 16
+hs.hints.style = "vimperator"
 hs.hotkey.bind({"alt"}, "Tab", function()
 	-- display hints for all applications
 	hs.hints.windowHints()
@@ -80,8 +81,15 @@ Install:andUse("Seal",
 		hotkeys = { show = { {"cmd"}, "space" } },
 		fn = function(s)
 			s:loadPlugins({"apps", "calc", "screencapture", "useractions", "pasteboard"})
+			-- history size
 			s.plugins.pasteboard.historySize=400
-
+			-- search path to look for apps
+			s.plugins.apps.appSearchPaths = {
+				"/Applications",
+				"~/Applications",
+			}
+			s.plugins.apps:restart()
+			-- quick searches and other user actions
 			defaultIcon=hs.image.systemImageNames.ApplicationIcon
 			s.plugins.useractions.actions = {
 				["Sumologic PR"] = {
