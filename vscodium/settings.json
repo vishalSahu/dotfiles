@@ -1,4 +1,7 @@
 {
+
+    "breadcrumbs.enabled": true,
+
     "editor.cursorBlinking": "solid",
     // "editor.cursorStyle": "block-outline",
     "editor.fontFamily": "'JetBrains Mono', 'Fira Code', Menlo",
@@ -49,6 +52,7 @@
     "terminal.integrated.scrollback": 5000,
 
     "window.zoomLevel": 0,
+    "window.title": "${activeEditorMedium}${separator}${rootName}",
 
     "workbench.activityBar.visible": true,
     "workbench.editor.decorations.colors": true,
@@ -57,6 +61,11 @@
     "workbench.editor.wrapTabs": true,
     "workbench.colorTheme": "Cobalt Next",
     "workbench.colorCustomizations": {
+        "editorLineNumber.foreground": "#797979",
+        "editorLineNumber.activeForeground": "#ffbb00",
+        "editorCursor.foreground": "#dfd1aaee",
+        "editorCursor.background": "#1f1f1f",
+        "terminalCursor.foreground": "#dfd1aaee",
         // "editor.background": "#1f2329",
         // "editor.lineHighlightBackground": "#303640",
         // "editorGutter.background": "#0a1313"
@@ -136,6 +145,5 @@
         "<C-a>": true,
         "<C-f>": true
     },
-
 }
 
