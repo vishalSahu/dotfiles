@@ -1,5 +1,4 @@
 {
-
     "breadcrumbs.enabled": true,
 
     "editor.cursorBlinking": "solid",
@@ -45,9 +44,11 @@
     "telemetry.enableTelemetry": false,
     "update.mode": "none",
 
-    "terminal.external.osxExec": "iTerm.app",
+    "terminal.external.osxExec": "kitty.app",
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.cursorWidth": 2,
     "terminal.integrated.fontFamily": "'JetBrains Mono', 'Fira Code', Menlo",
-    "terminal.integrated.fontSize": 12,
+    "terminal.integrated.fontSize": 13,
     "terminal.integrated.lineHeight": 1,
     "terminal.integrated.scrollback": 5000,
 
@@ -55,10 +56,6 @@
     "window.title": "${activeEditorMedium}${separator}${rootName}",
 
     "workbench.activityBar.visible": true,
-    "workbench.editor.decorations.colors": true,
-    "workbench.editor.enablePreviewFromCodeNavigation": true,
-    "workbench.editor.tabSizing": "shrink",
-    "workbench.editor.wrapTabs": true,
     "workbench.colorTheme": "Cobalt Next",
     "workbench.colorCustomizations": {
         "editorLineNumber.foreground": "#797979",
@@ -70,8 +67,15 @@
         // "editor.lineHighlightBackground": "#303640",
         // "editorGutter.background": "#0a1313"
     },
+    "workbench.editor.decorations.colors": true,
+    "workbench.editor.decorations.badges": true,
+    "workbench.editor.enablePreviewFromCodeNavigation": true,
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.pinnedTabSizing": "shrink",
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.editor.wrapTabs": true,
     "workbench.fontAliasing": "antialiased",
-    "workbench.iconTheme": "seti", // install qinjia.seti-icons
+    "workbench.iconTheme": "vs-seti",
     "workbench.settings.editor": "json",
     "workbench.statusBar.visible": true,
     // "workbench.tree.indent": 8,
@@ -119,10 +123,6 @@
     // Id: wesbos.theme-cobalt2
     // Link: https://marketplace.visualstudio.com/items?itemName=wesbos.theme-cobalt2
     //
-    // Name: seti-icons
-    // Id: qinjia.seti-icons
-    // Link: https://marketplace.visualstudio.com/items?itemName=qinjia.seti-icons
-    //
     // Might be useful
     // Name: Settings Sync
     // Id: shan.code-settings-sync
@@ -132,18 +132,19 @@
 
     // vim plugin
     "vim.easymotion": true,
+    "vim.enableNeovim": true,
     "vim.foldfix": true,
+    "vim.handleKeys": {
+        "<C-a>": true,
+        "<C-f>": true
+    },
     "vim.hlsearch": true,
     "vim.incsearch": true,
     "vim.leader": "<space>",
+    "vim.neovimPath": "/usr/local/bin/nvim",
     // "vim.searchHighlightColor": "#fa7035ce",
     // "vim.searchHighlightTextColor": "#2e2e2d",
     "vim.textwidth": 100, // use gq to format lines to 100 chars
     "vim.useSystemClipboard": false,
     "vim.useCtrlKeys": true,
-    "vim.handleKeys": {
-        "<C-a>": true,
-        "<C-f>": true
-    },
 }
-
