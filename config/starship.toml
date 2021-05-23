@@ -6,27 +6,25 @@ add_newline = false
 # Wait 10 milliseconds for starship to check files under the current directory.
 scan_timeout = 10
 
-prompt_order = [
-  "time",
-  "directory",
-  "git_branch",
-  "git_state",
-  #"git_status",
-  "cmd_duration",
-  #"line_break",
-  "battery",
-  "character",
-]
+format = """\
+  $time\
+  $directory\
+  $git_branch\
+  $git_state\
+  $git_status\
+  $cmd_duration\
+  $battery\
+  $character\
+  """
 
 # Replace the "❯" symbol in the prompt with "➜"
 [character]      # The name of the module we are configuring is "character"
-symbol = "➜"     # The "symbol" segment is being set to "➜"
+format = "➜ "     # The "symbol" segment is being set to "➜"
 
 [directory]
-prefix = "in "
-truncate_to_repo = false
-truncation_length = 5
-fish_style_pwd_dir_length = 1
+truncate_to_repo = true
+truncation_length = 2
+fish_style_pwd_dir_length = 2
 
 [[battery.display]]  # "bold red" style when capacity is between 0% and 10%
 threshold = 10
@@ -38,7 +36,8 @@ style = "bold yellow"
 
 [time]
 disabled = false
-format = "%r"
+style = "blue"
+time_format = "%I:%M%P"
 
 # Disable the package module, hiding it from the prompt completely
 [package]
