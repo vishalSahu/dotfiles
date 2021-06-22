@@ -25,6 +25,10 @@
       "value": true
     },
     {
+      "name": "contextualIdentitiesAutoRemove",
+      "value": true
+    },
+    {
       "name": "debugMode",
       "value": false
     },
@@ -59,7 +63,7 @@
     },
     {
       "name": "keepDefaultIcon",
-      "value": true
+      "value": false
     },
     {
       "id": "DEPRECATED - use localStorageCleanup",
@@ -92,7 +96,7 @@
     },
     {
       "name": "showNumOfCookiesInIcon",
-      "value": true
+      "value": false
     },
     {
       "name": "sizePopup",
@@ -110,10 +114,6 @@
       "id": "DEPRECATED - use default expressions",
       "name": "whiteCleanLocalstorage",
       "value": false
-    },
-    {
-      "name": "contextualIdentitiesAutoRemove",
-      "value": true
     }
   ]
 }

@@ -1,22 +1,23 @@
 {
     "createdBy": "Redirector v3.5.3",
-    "createdAt": "2020-11-15T19:12:52.200Z",
+    "createdAt": "2021-06-22T07:02:39.400Z",
     "redirects": [
         {
-            "description": "hooktube",
-            "exampleUrl": "https://www.youtube.com/",
-            "exampleResult": "https://hooktube.com/",
+            "description": "yewtu.be",
+            "exampleUrl": "https://www.youtube.com/watch?v=123",
+            "exampleResult": "https://yewtu.be/watch?v=123",
             "error": null,
             "includePattern": "http[s]?://[w]?[w]?[w]?.?youtube.com/(.*)",
             "excludePattern": "",
             "patternDesc": "",
-            "redirectUrl": "https://hooktube.com/$1",
+            "redirectUrl": "https://yewtu.be/$1",
             "patternType": "R",
             "processMatches": "noProcessing",
-            "disabled": true,
+            "disabled": false,
             "grouped": false,
             "appliesTo": [
-                "sub_frame"
+                "main_frame",
+                "xmlhttprequest"
             ]
         },
         {
@@ -28,24 +29,6 @@
             "excludePattern": "",
             "patternDesc": "",
             "redirectUrl": "https://invidious.tube/$1",
-            "patternType": "R",
-            "processMatches": "noProcessing",
-            "disabled": true,
-            "grouped": false,
-            "appliesTo": [
-                "main_frame",
-                "xmlhttprequest"
-            ]
-        },
-        {
-            "description": "invidious.snopyta.org",
-            "exampleUrl": "https://www.youtube.com/watch?v=123",
-            "exampleResult": "https://invidious.snopyta.org/watch?v=123",
-            "error": null,
-            "includePattern": "http[s]?://[w]?[w]?[w]?.?youtube.com/(.*)",
-            "excludePattern": "",
-            "patternDesc": "",
-            "redirectUrl": "https://invidious.snopyta.org/$1",
             "patternType": "R",
             "processMatches": "noProcessing",
             "disabled": true,
@@ -88,6 +71,23 @@
             "grouped": false,
             "appliesTo": [
                 "main_frame"
+            ]
+        },
+        {
+            "description": "hooktube",
+            "exampleUrl": "https://www.youtube.com/",
+            "exampleResult": "https://hooktube.com/",
+            "error": null,
+            "includePattern": "http[s]?://[w]?[w]?[w]?.?youtube.com/(.*)",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://hooktube.com/$1",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": true,
+            "grouped": false,
+            "appliesTo": [
+                "sub_frame"
             ]
         }
     ]

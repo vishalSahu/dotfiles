@@ -1,6 +1,7 @@
 {
   "allowedDomainsGoogleFonts": {},
-  "amountInjected": 2838,
+  "allowlistedDomains": {},
+  "amountInjected": 2630,
   "badgeColor": "#4A826C",
   "badgeTextColor": "#FFFFFF",
   "blockGoogleFonts": true,
@@ -9,7 +10,6 @@
   "domainsManipulateDOM": {},
   "enableLogging": true,
   "enforceStaging": false,
-  "hideReleaseNotes": false,
   "internalStatistics": false,
   "internalStatisticsData": {},
   "lastMappingUpdate": "2020-01-01",

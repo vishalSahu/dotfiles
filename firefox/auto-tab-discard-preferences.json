@@ -1,5 +1,13 @@
 {
   "chrome.storage.local": {
+    "./plugins/blank/core.js": true,
+    "./plugins/dummy/core.js": false,
+    "./plugins/focus/core.js": false,
+    "./plugins/force/core.js": false,
+    "./plugins/new/core.js": false,
+    "./plugins/next/core.js": false,
+    "./plugins/previous/core.js": false,
+    "./plugins/trash/core.js": false,
     "audio": true,
     "battery": false,
     "check-delay": 30000,
@@ -7,6 +15,7 @@
     "faqs": false,
     "favicon": true,
     "favicon-delay": 500,
+    "force.hostnames": [],
     "form": true,
     "go-hidden": false,
     "idle": false,
@@ -14,22 +23,32 @@
     "last-update": 1588273205723,
     "link.context": false,
     "log": false,
+    "max.single.discard": 50,
     "memory-enabled": false,
     "memory-value": 60,
     "mode": "time-based",
     "notification.permission": false,
-    "number": 30,
+    "number": 0,
     "online": true,
     "page.context": false,
-    "period": 3600,
+    "period": 10800,
     "pinned": false,
+    "prepends": "",
     "simultaneous-jobs": 10,
+    "startup-pinned": false,
+    "startup-release-pinned": false,
+    "startup-unpinned": false,
     "tab.context": true,
+    "trash.period": 24,
     "use-cache": false,
-    "whitelist": [],
-    "whitelist-url": []
+    "whitelist": [
+      "www.amazon.com"
+    ],
+    "whitelist-url": [],
+    "whitelist.session": []
   },
   "localStorage": {
-    "explore-count": "96"
+    "click": "popup",
+    "explore-count": "102"
   }
 }
