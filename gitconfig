@@ -1,3 +1,7 @@
+[user]
+	name = kodesv
+	email = kodesv@users.noreply.github.com
+
 [push]
 	default = upstream
 

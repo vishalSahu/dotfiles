@@ -134,6 +134,13 @@ Install:andUse("Seal",
 						hs.osascript.applescript(toggleDarkMode)
 					end,
 				},
+            ["nextdns"] = {
+               -- keyword = "dns",
+					fn = function()
+                  restartCmd='do shell script "sudo nextdns restart"'
+						hs.osascript.applescript(restartCmd)
+					end,
+				}
 			}
 			s:refreshAllCommands()
 		end,

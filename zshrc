@@ -35,5 +35,6 @@ export FZF_DEFAULT_COMMAND='fd --type file --color=auto --follow --hidden --excl
 export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 
 # commands to be executed during startup
+eval "$(starship init zsh)"
 
 # export MANPATH="/usr/local/man:$MANPATH"

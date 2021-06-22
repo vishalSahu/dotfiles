@@ -19,12 +19,15 @@ else # macOS `ls`
 	export LSCOLORS="Gxfxcxdxbxegedabagacad"
 fi
 # Always use color output for `ls`
-alias ls="command ls -F ${colorflag}"
+#alias ls="command ls -F ${colorflag}"
 #alias l="ls -lLBhX --time-style=locale"
 #alias la="ls -la $1 | less"
 #alias ll="ls -lX"
 #alias lx="ls -lXB" # sort by ext
 #alias lk="ls -lSr" # soft by size
+
+# use exa instead of ls
+alias ls="exa --icons"
 
 #IP addresses
 alias ip="dig +short myip.opendns.com @resolver1.opendns.com"

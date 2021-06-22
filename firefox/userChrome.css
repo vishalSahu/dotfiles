@@ -20,9 +20,42 @@
 }
 
 
-/**
- * My Custom Settings
+/*
+ * https://old.reddit.com/r/firefox/comments/6s2l0w/removing_the_white_flash_before_a_page_loads/dl9t14q/
+ * https://support.mozilla.org/en-US/questions/1269392
  */
+@-moz-document url(chrome://browser/content/browser.xhtml)
+{
+   #main-window,
+   browser[type="content-primary"],
+   browser[type="content"],
+   tabbrowser#content,
+   #content,
+   browser[type="content"] > html
+   {
+      background: #323234 !important;
+   }
+}
+
+
+
+/*
+ * Dark background on blank page and new tab.
+ */
+/**
+@-moz-document url("about:blank") {
+    html {
+      background-color: #1d2127
+    }
+}
+@-moz-document url(about:newtab) {
+    body, #newtab-customize-overlay {
+       background-color: #1d2127 !important;
+       color: #1d2127 !important;
+    }
+}
+**/
+
 
 /*
  *.tab-bottom-line {
