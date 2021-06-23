@@ -14,8 +14,8 @@
 
 [core]
   editor = vim
-  #pager = "diff-so-fancy | less --tabs=2 -RFX"
-  pager = "delta --plus-color='#054202' --minus-color='#420205' -w 100 --theme='base16' | less --tabs=2 -RFX"
+  pager = "diff-so-fancy | less --tabs=2 -RFX"
+  #pager = "delta --plus-color='#054202' --minus-color='#420205' -w 100 --theme='base16' | less --tabs=2 -RFX"
   excludesfile = /Users/vishal/.gitignore_global
 
 [alias]

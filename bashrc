@@ -54,8 +54,6 @@ alias ...='cd ../..'
 
 PS1='\[\e[0;33m\]\h: \w\[\e[m\] \[\e[0;32m\]\$ \[\e[m\]'
 export PROMPT_DIRTRIM=3 #trims the directory in \w to 4
-export NVM_DIR="$HOME/.nvm"
-source "/usr/local/opt/nvm/nvm.sh"
 
 # Use auto completion provided by brew
 if [ -f $(brew --prefix)/etc/bash_completion  ]; then
@@ -88,10 +86,4 @@ case "$TERM" in
 esac
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-PATH="/Users/vishal/perl5/bin${PATH:+:${PATH}}"; export PATH;
-PERL5LIB="/Users/vishal/perl5/lib/perl5${PERL5LIB:+:${PERL5LIB}}"; export PERL5LIB;
-PERL_LOCAL_LIB_ROOT="/Users/vishal/perl5${PERL_LOCAL_LIB_ROOT:+:${PERL_LOCAL_LIB_ROOT}}"; export PERL_LOCAL_LIB_ROOT;
-PERL_MB_OPT="--install_base \"/Users/vishal/perl5\""; export PERL_MB_OPT;
-PERL_MM_OPT="INSTALL_BASE=/Users/vishal/perl5"; export PERL_MM_OPT;

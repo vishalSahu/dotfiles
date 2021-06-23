@@ -19,7 +19,8 @@ zstyle ':prezto:load' pmodule \
   'utility'
 
 # Set theme
-zstyle ':prezto:module:prompt' theme 'agnoster'
+# !! starship prompt fails if this line is not commented.
+#zstyle ':prezto:module:prompt' theme 'agnoster'
 
 # Auto convert .... to ../..
 zstyle ':prezto:module:editor' dot-expansion 'yes'
