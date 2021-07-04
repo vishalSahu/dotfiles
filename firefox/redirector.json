@@ -1,7 +1,24 @@
 {
     "createdBy": "Redirector v3.5.3",
-    "createdAt": "2021-06-22T07:02:39.400Z",
+    "createdAt": "2021-06-24T04:39:59.100Z",
     "redirects": [
+        {
+            "description": "Reddit",
+            "exampleUrl": "https://reddit.com/r/soccer",
+            "exampleResult": "https://old.reddit.com/r/soccer",
+            "error": null,
+            "includePattern": "http[s]?://[w]?[w]?[w]?.?reddit.com/(.*)",
+            "excludePattern": "",
+            "patternDesc": "",
+            "redirectUrl": "https://old.reddit.com/$1",
+            "patternType": "R",
+            "processMatches": "noProcessing",
+            "disabled": false,
+            "grouped": false,
+            "appliesTo": [
+                "main_frame"
+            ]
+        },
         {
             "description": "yewtu.be",
             "exampleUrl": "https://www.youtube.com/watch?v=123",
@@ -21,17 +38,17 @@
             ]
         },
         {
-            "description": "invidious.tube",
+            "description": "vid.puffyan.us",
             "exampleUrl": "https://www.youtube.com/watch?v=123",
-            "exampleResult": "https://invidious.tube/watch?v=123",
+            "exampleResult": "https://vid.puffyan.us/watch?v=123",
             "error": null,
             "includePattern": "http[s]?://[w]?[w]?[w]?.?youtube.com/(.*)",
             "excludePattern": "",
             "patternDesc": "",
-            "redirectUrl": "https://invidious.tube/$1",
+            "redirectUrl": "https://vid.puffyan.us/$1",
             "patternType": "R",
             "processMatches": "noProcessing",
-            "disabled": true,
+            "disabled": false,
             "grouped": false,
             "appliesTo": [
                 "main_frame",
@@ -54,23 +71,6 @@
             "appliesTo": [
                 "main_frame",
                 "xmlhttprequest"
-            ]
-        },
-        {
-            "description": "Reddit",
-            "exampleUrl": "https://reddit.com/r/soccer",
-            "exampleResult": "https://old.reddit.com/r/soccer",
-            "error": null,
-            "includePattern": "http[s]?://[w]?[w]?[w]?.?reddit.com/(.*)",
-            "excludePattern": "",
-            "patternDesc": "",
-            "redirectUrl": "https://old.reddit.com/$1",
-            "patternType": "R",
-            "processMatches": "noProcessing",
-            "disabled": false,
-            "grouped": false,
-            "appliesTo": [
-                "main_frame"
             ]
         },
         {
