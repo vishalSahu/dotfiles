@@ -108,6 +108,7 @@ Plug 'hrsh7th/nvim-compe'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'ojroques/nvim-lspfuzzy'
+" another fuzzy finder https://github.com/nvim-telescope/telescope.nvim
 
 " colorschemes
 Plug 'lourenci/github-colors'
