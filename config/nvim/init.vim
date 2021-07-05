@@ -105,6 +105,9 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'neovim/nvim-lspconfig'
 Plug 'kabouzeid/nvim-lspinstall'
 Plug 'hrsh7th/nvim-compe'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'ojroques/nvim-lspfuzzy'
 
 " colorschemes
 Plug 'lourenci/github-colors'
@@ -445,6 +448,43 @@ endfunction
 let g:go_fmt_command = "goimports"
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" fzf
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" This is the default option:
+"   - Preview window on the right with 50% width
+"   - CTRL-/ will toggle preview window.
+" - Note that this array is passed as arguments to fzf#vim#with_preview function.
+" - To learn more about preview window options, see `--preview-window` section of `man fzf`.
+let g:fzf_preview_window = ['right:50%', 'ctrl-/']
+
+" Preview window on the upper side of the window with 40% height,
+" hidden by default, ctrl-/ to toggle
+let g:fzf_preview_window = ['up:40%:hidden', 'ctrl-/']
+
+" Empty value to disable preview window altogether
+let g:fzf_preview_window = []
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" nvim-lspfuzzy
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+lua <<EOF
+require('lspfuzzy').setup {
+  methods = 'all',         -- either 'all' or a list of LSP methods (see below)
+  fzf_preview = {          -- arguments to the FZF '--preview-window' option
+    'right:+{2}-/2'          -- preview on the right and centered on entry
+  },
+  fzf_action = {           -- FZF actions
+    ['ctrl-t'] = 'tabedit',  -- go to location in a new tab
+    ['ctrl-v'] = 'vsplit',   -- go to location in a vertical split
+    ['ctrl-x'] = 'split',    -- go to location in a horizontal split
+  },
+  fzf_modifier = ':~:.',   -- format FZF entries, see |filename-modifiers|
+  fzf_trim = true,         -- trim FZF entries
+}
+EOF
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " nvim-treesitter
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -554,4 +594,14 @@ inoremap <silent><expr> <CR>      compe#confirm('<CR>')
 inoremap <silent><expr> <C-e>     compe#close('<C-e>')
 inoremap <silent><expr> <C-f>     compe#scroll({ 'delta': +4 })
 inoremap <silent><expr> <C-d>     compe#scroll({ 'delta': -4 })
+
+" lsp mappings
+nnoremap <silent> gd <cmd>lua vim.lsp.buf.definition()<CR>
+nnoremap <silent> gh     <cmd>lua vim.lsp.buf.hover()<CR>
+nnoremap <silent> gD    <cmd>lua vim.lsp.buf.implementation()<CR>
+nnoremap <silent> <c-k> <cmd>lua vim.lsp.buf.signature_help()<CR>
+nnoremap <silent> 1gD   <cmd>lua vim.lsp.buf.type_definition()<CR>
+nnoremap <silent> gr    <cmd>lua vim.lsp.buf.references()<CR>
+nnoremap <silent> g0    <cmd>lua vim.lsp.buf.document_symbol()<CR>
+nnoremap <silent> gW    <cmd>lua vim.lsp.buf.workspace_symbol()<CR>
 
