@@ -84,8 +84,11 @@ let g:python3_host_prog = '/usr/local/bin/python3'
 " vim-plug directory
 call plug#begin('~/.local/share/nvim/plugged')
 
-Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/nerdcommenter'
+Plug 'preservim/nerdtree'
+Plug 'ryanoasis/vim-devicons'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+" Plug 'preservim/nerdcommenter'
+Plug 'b3nj5m1n/kommentary'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-repeat'
@@ -316,24 +319,46 @@ nnoremap <C-H> <C-W><C-H>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " nerdtree
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"autocmd vimenter * NERDTree
-"autocmd vimEnter * wincmd w
+autocmd vimenter * NERDTree
+autocmd vimEnter * wincmd w
 nnoremap <C-n> :NERDTreeToggle<CR>
 " close vim if the only window left open is a NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 " always open file in new tab
 let NERDTreeMapOpenInTab='\r'
 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " nerdcommenter
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:NERDSpaceDelims=0 "add spaces after comment delimiters
-let g:NERDDefaultAlign='left' "align line-wise comment delimiters flush left
-let g:NERDCommentEmptyLines=1 "allow commenting and inverting empty lines
-let g:NERDTrimTrailingWhitespace=1 "trim trailing whitespace when uncommenting
-"inoremap <leader>c <C-o>:call NERDComment(0, "invert")<CR>
-nnoremap <leader>c :call NERDComment('n', "invert")<CR>
-vnoremap <leader>c :call NERDComment('x', "invert")<CR>
+" let g:NERDSpaceDelims=0 "add spaces after comment delimiters
+" let g:NERDDefaultAlign='left' "align line-wise comment delimiters flush left
+" let g:NERDCommentEmptyLines=1 "allow commenting and inverting empty lines
+" let g:NERDTrimTrailingWhitespace=1 "trim trailing whitespace when uncommenting
+"" inoremap <leader>c <C-o>:call NERDComment(0, "invert")<CR>
+" nnoremap <leader>c :call NERDComment('n', "invert")<CR>
+" vnoremap <leader>c :call NERDComment('x', "invert")<CR>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" kommentary
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+lua << EOF
+require('kommentary.config').configure_language("default", {
+    prefer_single_line_comments = true,
+    use_consistent_indentation = true,
+})
+
+-- vim.api.nvim_set_keymap("n", "<leader>c", "<Plug>kommentary_line_default", {})
+-- vim.api.nvim_set_keymap("x", "<leader>c", "<Plug>kommentary_visual_default", {})
+-- vim.api.nvim_set_keymap("n", "<leader>cc", "<Plug>kommentary_motion_default", {})
+
+-- vim registers <C-/> as <C-_>
+-- https://stackoverflow.com/questions/9051837/how-to-map-c-to-toggle-comments-in-vim
+vim.api.nvim_set_keymap("n", "<C-_>", "<Plug>kommentary_line_default", {})
+vim.api.nvim_set_keymap("x", "<C-_>", "<Plug>kommentary_visual_default", {})
+EOF
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " deoplete
@@ -344,6 +369,7 @@ vnoremap <leader>c :call NERDComment('x', "invert")<CR>
 "let g:deoplete#enable_at_startup = 1
 " <TAB>: completion.
 "inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " ctrlp
@@ -367,6 +393,7 @@ let g:ctrlp_prompt_mappings = {
     \ }
 "let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclude-standard']
 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " gitgutter
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -375,6 +402,7 @@ let g:gitgutter_eager=0
 " jump between hunks
 nmap ]h <Plug>GitGutterNextHunk
 nmap [h <Plug>GitGutterPrevHunk
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " tagbar
@@ -400,6 +428,7 @@ let g:tagbar_type_scala = {
     \ ]
 \ }
 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " indentline
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -407,10 +436,12 @@ nmap <leader>i :IndentLinesToggle<CR>
 let g:indentLine_showFirstIndentLevel=1
 let g:indentLine_noConcealCursor="nc"
 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " auto-pairs
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:AutoPairsUseInsertedCount=1
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " lightline
@@ -448,6 +479,7 @@ endfunction
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:go_fmt_command = "goimports"
 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " fzf
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -484,6 +516,7 @@ require('lspfuzzy').setup {
   fzf_trim = true,         -- trim FZF entries
 }
 EOF
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " nvim-treesitter
@@ -526,6 +559,7 @@ require'nvim-treesitter.configs'.setup {
 }
 EOF
 
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " nvim-lspconfig
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -546,6 +580,7 @@ require'lspinstall'.post_install_hook = function ()
   vim.cmd("bufdo e") -- this triggers the FileType autocmd that starts the server
 end
 EOF
+
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " nvim-compe
